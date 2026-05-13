@@ -1,0 +1,2324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pearl Dental Studio Clinic – Bangalore</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --pearl: #f8f5f0;
+      --navy: #0d2137;
+      --gold: #c8975a;
+      --teal: #3ba8a8;
+      --soft: #eef7f7;
+      --muted: #7a8fa6;
+      --border: #e2ddd6;
+    }
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{font-family:'DM Sans',sans-serif;background:#fff;color:#333;}
+    h1,h2,h3,h4,.serif{font-family:'Playfair Display',serif;}
+
+    /* NAVBAR */
+    .navbar{background:#fff;border-bottom:1px solid var(--border);padding:10px 0;position:sticky;top:0;z-index:9999;box-shadow:0 2px 20px rgba(0,0,0,.06);}
+    .navbar-brand{font-family:'Playfair Display',serif;font-size:1.4rem;color:var(--navy)!important;font-weight:700;display:flex;align-items:center;gap:10px;}
+    .brand-tooth{width:38px;height:38px;background:linear-gradient(135deg,var(--teal),var(--navy));border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:1rem;}
+    .nav-link{color:var(--navy)!important;font-weight:500;font-size:.92rem;letter-spacing:.3px;padding:6px 14px!important;transition:.2s;}
+    .nav-link:hover,.nav-link.active{color:var(--teal)!important;}
+    .btn-book{background:linear-gradient(135deg,var(--teal),#2a8a8a);color:#fff!important;border-radius:25px;padding:8px 22px!important;font-weight:600;font-size:.88rem;letter-spacing:.5px;box-shadow:0 4px 14px rgba(59,168,168,.35);transition:.25s;}
+    .btn-book:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(59,168,168,.45);}
+
+    /* HERO */
+    .hero{position:relative;min-height:88vh;display:flex;align-items:center;overflow:hidden;}
+    .hero-slide{min-height:88vh;position:relative;display:flex;align-items:center;}
+    .hero-slide::before{content:'';position:absolute;inset:0;background:linear-gradient(120deg,rgba(13,33,55,.82) 0%,rgba(13,33,55,.45) 55%,rgba(13,33,55,.1) 100%);z-index:1;}
+    .hero-slide img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+    .hero-content{position:relative;z-index:2;color:#fff;}
+    .hero-badge{background:rgba(59,168,168,.25);border:1px solid rgba(59,168,168,.5);color:var(--teal);padding:6px 16px;border-radius:20px;font-size:.82rem;letter-spacing:1px;text-transform:uppercase;display:inline-block;margin-bottom:18px;backdrop-filter:blur(8px);}
+    .hero h1{font-size:clamp(2.2rem,5vw,3.8rem);line-height:1.15;margin-bottom:18px;text-shadow:0 2px 20px rgba(0,0,0,.3);}
+    .hero h1 span{color:var(--gold);}
+    .hero p{font-size:1.05rem;opacity:.88;max-width:520px;margin-bottom:28px;line-height:1.7;}
+    .hero-btns{display:flex;gap:14px;flex-wrap:wrap;}
+    .btn-primary-hero{background:linear-gradient(135deg,var(--teal),#2a8a8a);color:#fff;padding:13px 30px;border-radius:30px;font-weight:600;border:none;cursor:pointer;transition:.25s;font-size:.95rem;}
+    .btn-primary-hero:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(59,168,168,.5);}
+    .btn-outline-hero{background:transparent;color:#fff;padding:13px 30px;border-radius:30px;font-weight:600;border:2px solid rgba(255,255,255,.6);cursor:pointer;transition:.25s;font-size:.95rem;}
+    .btn-outline-hero:hover{background:rgba(255,255,255,.12);border-color:#fff;}
+    .hero-stats{display:flex;gap:32px;margin-top:36px;flex-wrap:wrap;}
+    .hero-stat .num{font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;color:var(--gold);}
+    .hero-stat .lbl{font-size:.78rem;opacity:.7;text-transform:uppercase;letter-spacing:.8px;margin-top:2px;}
+    .carousel-indicators [data-bs-target]{background:rgba(255,255,255,.5);width:8px;height:8px;border-radius:50%;border:none;}
+    .carousel-indicators .active{background:#fff;}
+
+    /* SECTION COMMONS */
+    section{padding:80px 0;}
+    .sec-badge{background:var(--soft);color:var(--teal);padding:5px 18px;border-radius:20px;font-size:.78rem;letter-spacing:1px;text-transform:uppercase;font-weight:600;display:inline-block;margin-bottom:14px;}
+    .sec-title{font-size:clamp(1.8rem,3vw,2.6rem);color:var(--navy);margin-bottom:12px;}
+    .sec-sub{color:var(--muted);font-size:.95rem;line-height:1.7;max-width:540px;}
+    .divider{width:60px;height:3px;background:linear-gradient(90deg,var(--teal),var(--gold));border-radius:4px;margin:16px 0 24px;}
+
+    /* MARQUEE STRIP */
+    .marquee-strip{background:linear-gradient(135deg,var(--navy),#1a3a5c);padding:14px 0;overflow:hidden;}
+    .marquee-inner{display:flex;gap:48px;animation:marquee 28s linear infinite;white-space:nowrap;}
+    .marquee-inner span{color:rgba(255,255,255,.7);font-size:.82rem;letter-spacing:.6px;text-transform:uppercase;display:flex;align-items:center;gap:8px;}
+    .marquee-inner span i{color:var(--gold);}
+    @keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+    /* SERVICES TABS */
+    .services-section{background:var(--pearl);}
+    .nav-tabs.service-tabs{border:none;gap:6px;flex-wrap:wrap;justify-content:center;margin-bottom:40px;}
+    .service-tabs .nav-link{border:2px solid var(--border)!important;border-radius:30px!important;color:var(--navy);font-size:.83rem;font-weight:600;padding:8px 18px;background:#fff;transition:.2s;}
+    .service-tabs .nav-link.active,.service-tabs .nav-link:hover{background:var(--teal)!important;color:#fff!important;border-color:var(--teal)!important;}
+    .service-card{background:#fff;border-radius:20px;padding:32px;box-shadow:0 4px 24px rgba(0,0,0,.06);height:100%;transition:.3s;border:1px solid var(--border);}
+    .service-card:hover{transform:translateY(-6px);box-shadow:0 12px 40px rgba(59,168,168,.15);}
+    .svc-icon{width:64px;height:64px;background:var(--soft);border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:1.6rem;color:var(--teal);margin-bottom:20px;}
+    .svc-icon.gold{background:#fdf3e8;color:var(--gold);}
+    .service-card h4{font-size:1.12rem;color:var(--navy);margin-bottom:10px;}
+    .service-card p{color:var(--muted);font-size:.88rem;line-height:1.7;margin-bottom:16px;}
+    .price-tag{background:var(--soft);color:var(--teal);padding:4px 14px;border-radius:20px;font-size:.82rem;font-weight:700;display:inline-block;}
+    .price-tag.gold{background:#fdf3e8;color:var(--gold);}
+    .service-features{list-style:none;margin:14px 0 0;padding:0;}
+    .service-features li{font-size:.84rem;color:var(--muted);padding:3px 0;display:flex;align-items:center;gap:8px;}
+    .service-features li i{color:var(--teal);font-size:.75rem;}
+
+    /* KIDS SECTION */
+    .kids-section{background:linear-gradient(135deg,#e8f8f8 0%,#fff5ec 100%);}
+    .kids-card{background:#fff;border-radius:24px;padding:40px;border:2px solid rgba(59,168,168,.15);position:relative;overflow:hidden;}
+    .kids-card::before{content:'🦷';position:absolute;right:-10px;top:-10px;font-size:5rem;opacity:.06;transform:rotate(15deg);}
+    .kids-badge{background:linear-gradient(135deg,#ff9f6b,#f97316);color:#fff;padding:6px 20px;border-radius:20px;font-size:.82rem;font-weight:700;display:inline-block;margin-bottom:16px;}
+    .kids-feature{display:flex;align-items:center;gap:14px;padding:10px;border-radius:12px;background:var(--soft);margin-bottom:10px;}
+    .kids-feature i{font-size:1.2rem;color:var(--teal);width:28px;}
+    .kids-feature span{font-size:.88rem;color:var(--navy);font-weight:500;}
+
+    /* WHY CHOOSE US */
+    .why-section{background:linear-gradient(160deg,var(--navy) 0%,#1a3a5c 100%);position:relative;overflow:hidden;}
+    .why-section::before{content:'';position:absolute;top:-100px;right:-100px;width:400px;height:400px;background:radial-gradient(circle,rgba(59,168,168,.12) 0%,transparent 70%);}
+    .why-section::after{content:'';position:absolute;bottom:-80px;left:-80px;width:300px;height:300px;background:radial-gradient(circle,rgba(200,151,90,.08) 0%,transparent 70%);}
+    .why-card{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);border-radius:18px;padding:28px;text-align:center;backdrop-filter:blur(10px);transition:.3s;}
+    .why-card:hover{background:rgba(255,255,255,.12);transform:translateY(-4px);}
+    .why-icon{width:60px;height:60px;background:rgba(59,168,168,.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.5rem;color:var(--teal);margin:0 auto 16px;}
+    .why-card h5{color:#fff;font-size:1rem;margin-bottom:8px;}
+    .why-card p{color:rgba(255,255,255,.55);font-size:.84rem;line-height:1.6;}
+
+    /* ABOUT */
+    .about-section{background:#fff;}
+    .doctor-card{text-align:center;border-radius:20px;overflow:hidden;border:1px solid var(--border);transition:.3s;background:#fff;}
+    .doctor-card:hover{transform:translateY(-5px);box-shadow:0 16px 40px rgba(0,0,0,.1);}
+    .doctor-img{width:100%;height:220px;object-fit:cover;object-position:top;}
+    .doctor-img-placeholder{width:100%;height:220px;background:linear-gradient(135deg,var(--soft),#d5eeee);display:flex;align-items:center;justify-content:center;font-size:4rem;color:var(--teal);}
+    .doctor-info{padding:20px;}
+    .doctor-info h5{color:var(--navy);font-size:1rem;margin-bottom:4px;}
+    .doctor-info .role{color:var(--teal);font-size:.82rem;font-weight:600;margin-bottom:8px;}
+    .doctor-info p{color:var(--muted);font-size:.8rem;line-height:1.5;}
+    .about-img-wrap{border-radius:24px;overflow:hidden;position:relative;}
+    .about-img-wrap img{width:100%;height:420px;object-fit:cover;}
+    .about-badge-float{position:absolute;bottom:24px;left:24px;background:#fff;border-radius:16px;padding:14px 20px;box-shadow:0 8px 30px rgba(0,0,0,.12);}
+    .about-badge-float .num{font-family:'Playfair Display',serif;font-size:1.8rem;color:var(--teal);font-weight:700;}
+    .about-badge-float .txt{font-size:.75rem;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;}
+
+    /* TESTIMONIALS */
+    .testimonials-section{background:var(--pearl);}
+    .testi-card{background:#fff;border-radius:20px;padding:30px;border:1px solid var(--border);position:relative;}
+    .testi-card::before{content:'\201C';font-family:'Playfair Display',serif;font-size:5rem;color:var(--teal);opacity:.15;position:absolute;top:-10px;left:20px;line-height:1;}
+    .stars{color:#f0a500;font-size:.88rem;margin-bottom:14px;}
+    .testi-card p{color:#555;font-size:.9rem;line-height:1.7;font-style:italic;margin-bottom:18px;}
+    .testi-author{display:flex;align-items:center;gap:12px;}
+    .testi-avatar{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--teal),var(--navy));display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:.95rem;flex-shrink:0;}
+    .testi-name{font-weight:600;color:var(--navy);font-size:.9rem;}
+    .testi-loc{color:var(--muted);font-size:.78rem;}
+
+    /* BLOG */
+    .blog-section{background:#fff;}
+    .blog-card{border-radius:18px;overflow:hidden;border:1px solid var(--border);transition:.3s;}
+    .blog-card:hover{transform:translateY(-5px);box-shadow:0 12px 35px rgba(0,0,0,.08);}
+    .blog-img{width:100%;height:200px;object-fit:cover;}
+    .blog-img-placeholder{width:100%;height:200px;background:linear-gradient(135deg,var(--soft),#cdeaea);display:flex;align-items:center;justify-content:center;font-size:3rem;}
+    .blog-body{padding:22px;}
+    .blog-cat{color:var(--teal);font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.8px;margin-bottom:8px;}
+    .blog-body h5{color:var(--navy);font-size:.98rem;margin-bottom:10px;line-height:1.5;}
+    .blog-body p{color:var(--muted);font-size:.84rem;line-height:1.6;margin-bottom:14px;}
+    .blog-meta{color:var(--muted);font-size:.78rem;display:flex;align-items:center;gap:14px;}
+
+    /* LOCATION */
+    .location-section{background:var(--soft);}
+    .map-container{border-radius:20px;overflow:hidden;box-shadow:0 8px 30px rgba(0,0,0,.1);}
+    .contact-info-card{background:#fff;border-radius:20px;padding:32px;height:100%;border:1px solid var(--border);}
+    .contact-item{display:flex;gap:16px;align-items:flex-start;padding:16px 0;border-bottom:1px solid var(--border);}
+    .contact-item:last-child{border-bottom:none;}
+    .contact-icon{width:44px;height:44px;background:var(--soft);border-radius:12px;display:flex;align-items:center;justify-content:center;color:var(--teal);font-size:1rem;flex-shrink:0;}
+    .contact-item h6{color:var(--navy);font-size:.88rem;font-weight:600;margin-bottom:3px;}
+    .contact-item p,.contact-item a{color:var(--muted);font-size:.84rem;margin:0;text-decoration:none;}
+    .contact-item a:hover{color:var(--teal);}
+
+    /* FOLLOW US / FOOTER */
+    .follow-section{background:linear-gradient(160deg,var(--navy),#1a3a5c);padding:60px 0 30px;}
+    .social-btn{display:inline-flex;align-items:center;gap:10px;padding:12px 24px;border-radius:30px;font-weight:600;font-size:.9rem;transition:.25s;text-decoration:none;margin:6px;}
+    .social-btn.insta{background:linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);color:#fff;}
+    .social-btn.fb{background:#1877f2;color:#fff;}
+    .social-btn.wa{background:#25d366;color:#fff;}
+    .social-btn.email{background:rgba(255,255,255,.12);color:#fff;border:2px solid rgba(255,255,255,.3);}
+    .social-btn:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(0,0,0,.25);}
+    .footer-bottom{border-top:1px solid rgba(255,255,255,.1);margin-top:36px;padding-top:22px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;}
+    .footer-logo{font-family:'Playfair Display',serif;font-size:1.2rem;color:#fff;font-weight:700;}
+    .footer-links a{color:rgba(255,255,255,.55);font-size:.82rem;text-decoration:none;margin:0 10px;transition:.2s;}
+    .footer-links a:hover{color:var(--teal);}
+    .copyright{color:rgba(255,255,255,.4);font-size:.78rem;}
+
+    /* BOOK MODAL */
+    .modal-content{border-radius:20px;border:none;overflow:hidden;}
+    .modal-header{background:linear-gradient(135deg,var(--navy),#1a3a5c);color:#fff;border:none;padding:24px 28px;}
+    .modal-header .btn-close{filter:invert(1);}
+    .modal-body{padding:28px;}
+    .form-label{font-weight:600;color:var(--navy);font-size:.88rem;margin-bottom:6px;}
+    .form-control,.form-select{border:2px solid var(--border);border-radius:10px;padding:10px 14px;font-size:.9rem;transition:.2s;}
+    .form-control:focus,.form-select:focus{border-color:var(--teal);box-shadow:0 0 0 3px rgba(59,168,168,.15);}
+    .btn-submit{background:linear-gradient(135deg,var(--teal),#2a8a8a);color:#fff;padding:13px;border-radius:12px;font-weight:700;border:none;width:100%;font-size:.95rem;cursor:pointer;transition:.25s;}
+    .btn-submit:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(59,168,168,.4);}
+
+    /* VOICE AGENT JUHI */
+    #juhi-fab{position:fixed;bottom:28px;right:28px;z-index:99999;display:flex;flex-direction:column;align-items:flex-end;gap:10px;}
+    .juhi-bubble{background:linear-gradient(135deg,var(--teal),#2a8a8a);width:58px;height:58px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 6px 24px rgba(59,168,168,.5);transition:.25s;position:relative;}
+    .juhi-bubble:hover{transform:scale(1.08);}
+    .juhi-bubble img{width:34px;height:34px;border-radius:50%;object-fit:cover;}
+    .juhi-pulse{position:absolute;inset:-4px;border-radius:50%;border:2px solid rgba(59,168,168,.5);animation:pulse 2s infinite;}
+    @keyframes pulse{0%{transform:scale(1);opacity:1}70%{transform:scale(1.3);opacity:0}100%{transform:scale(1);opacity:0}}
+    .juhi-label{background:var(--navy);color:#fff;font-size:.7rem;font-weight:700;padding:3px 10px;border-radius:10px;letter-spacing:.5px;}
+    .juhi-panel{position:fixed;bottom:100px;right:28px;width:340px;background:#fff;border-radius:22px;box-shadow:0 20px 60px rgba(0,0,0,.18);z-index:99998;display:none;overflow:hidden;border:1px solid var(--border);}
+    .juhi-panel.open{display:block;animation:slideUp .3s ease;}
+    @keyframes slideUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+    .juhi-header{background:linear-gradient(135deg,var(--navy),#1a3a5c);padding:18px 20px;display:flex;align-items:center;gap:12px;position:relative;}
+    .juhi-avatar{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--teal),#2a8a8a);display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0;}
+    .juhi-info h6{color:#fff;margin:0;font-size:.95rem;font-weight:700;}
+    .juhi-info .status{color:var(--teal);font-size:.72rem;display:flex;align-items:center;gap:5px;}
+    .juhi-info .status::before{content:'';width:7px;height:7px;background:var(--teal);border-radius:50%;display:inline-block;animation:blink 1.5s infinite;}
+    @keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+    .juhi-close-btn{position:absolute;right:14px;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.15);border:none;color:#fff;width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:.85rem;}
+    .juhi-chat{height:220px;overflow-y:auto;padding:16px;display:flex;flex-direction:column;gap:10px;background:#f9f9f9;}
+    .msg{max-width:85%;padding:10px 14px;border-radius:14px;font-size:.83rem;line-height:1.5;}
+    .msg.juhi{background:var(--soft);color:var(--navy);align-self:flex-start;border-bottom-left-radius:4px;}
+    .msg.user{background:linear-gradient(135deg,var(--teal),#2a8a8a);color:#fff;align-self:flex-end;border-bottom-right-radius:4px;}
+    .juhi-controls{padding:14px 16px;border-top:1px solid var(--border);display:flex;flex-direction:column;gap:10px;}
+    .juhi-text-input{display:flex;gap:8px;}
+    .juhi-text-input input{flex:1;border:2px solid var(--border);border-radius:20px;padding:8px 14px;font-size:.83rem;outline:none;transition:.2s;}
+    .juhi-text-input input:focus{border-color:var(--teal);}
+    .juhi-send{background:var(--teal);border:none;color:#fff;width:36px;height:36px;border-radius:50%;cursor:pointer;font-size:.9rem;transition:.2s;}
+    .juhi-send:hover{background:#2a8a8a;}
+    .juhi-mic-row{display:flex;align-items:center;gap:10px;justify-content:center;}
+    .juhi-mic{background:linear-gradient(135deg,var(--teal),#2a8a8a);border:none;color:#fff;width:52px;height:52px;border-radius:50%;cursor:pointer;font-size:1.3rem;transition:.25s;box-shadow:0 4px 14px rgba(59,168,168,.35);}
+    .juhi-mic:hover{transform:scale(1.08);}
+    .juhi-mic.listening{background:linear-gradient(135deg,#e74c3c,#c0392b);animation:micPulse 1s infinite;}
+    @keyframes micPulse{0%,100%{box-shadow:0 4px 14px rgba(231,76,60,.35)}50%{box-shadow:0 4px 24px rgba(231,76,60,.65)}}
+    .juhi-mic-hint{font-size:.72rem;color:var(--muted);}
+    .juhi-booking-form{padding:16px;border-top:1px solid var(--border);background:var(--soft);display:none;}
+    .juhi-booking-form h6{color:var(--navy);font-size:.88rem;font-weight:700;margin-bottom:12px;}
+    .juhi-booking-form input,.juhi-booking-form select{width:100%;border:2px solid var(--border);border-radius:8px;padding:7px 11px;font-size:.8rem;margin-bottom:8px;outline:none;background:#fff;}
+    .juhi-booking-form input:focus,.juhi-booking-form select:focus{border-color:var(--teal);}
+    .juhi-confirm-btn{background:linear-gradient(135deg,var(--teal),#2a8a8a);color:#fff;border:none;border-radius:8px;padding:9px;width:100%;font-size:.83rem;font-weight:700;cursor:pointer;}
+
+    /* STATS TICKER */
+    .stats-bar{background:#fff;padding:28px 0;border-bottom:1px solid var(--border);}
+    .stat-item{text-align:center;padding:10px 20px;}
+    .stat-item .big{font-family:'Playfair Display',serif;font-size:2.2rem;color:var(--navy);font-weight:700;line-height:1;}
+    .stat-item .big span{color:var(--teal);}
+    .stat-item .desc{color:var(--muted);font-size:.8rem;text-transform:uppercase;letter-spacing:.6px;margin-top:5px;}
+
+    /* RESPONSIVE TWEAKS */
+    @media(max-width:768px){
+      section{padding:52px 0;}
+      .hero{min-height:70vh;}
+      .hero-slide{min-height:70vh;}
+      .hero h1{font-size:1.9rem;}
+      .juhi-panel{width:300px;right:14px;}
+    }
+
+    /* QUICK REPLY BUTTONS */
+    .qr-btn{background:#fff;border:1.5px solid var(--border);border-radius:20px;padding:4px 11px;font-size:.72rem;color:var(--navy);font-weight:600;cursor:pointer;transition:.2s;white-space:nowrap;}
+    .qr-btn:hover{background:var(--soft);border-color:var(--teal);color:var(--teal);}
+    @keyframes dotBounce{0%,80%,100%{transform:scale(0);opacity:.3}40%{transform:scale(1);opacity:1}}
+
+    /* SCROLL ANIMATE */
+    .fade-up{opacity:0;transform:translateY(30px);transition:.7s ease;}
+    .fade-up.visible{opacity:1;transform:translateY(0);}
+
+    /* PRELOADER */
+    #preloader{position:fixed;inset:0;background:#fff;z-index:999999;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:16px;transition:opacity .5s;}
+    .pre-logo{font-family:'Playfair Display',serif;font-size:2rem;color:var(--navy);font-weight:700;}
+    .pre-logo span{color:var(--teal);}
+    .pre-bar{width:120px;height:3px;background:var(--border);border-radius:4px;overflow:hidden;}
+    .pre-fill{height:100%;background:linear-gradient(90deg,var(--teal),var(--gold));border-radius:4px;animation:load 1.5s ease forwards;}
+    @keyframes load{from{width:0}to{width:100%}}
+  </style>
+</head>
+<body>
+
+<!-- PRELOADER -->
+<div id="preloader">
+  <div class="pre-logo">Pearl <span>Dental</span> Studio</div>
+  <div class="pre-bar"><div class="pre-fill"></div></div>
+  <p style="color:var(--muted);font-size:.82rem;letter-spacing:1px;text-transform:uppercase;">Loading...</p>
+</div>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg">
+  <div class="container">
+    <a class="navbar-brand" href="#home">
+      <div class="brand-tooth"><i class="fas fa-tooth"></i></div>
+      Pearl Dental<br><small style="font-size:.7rem;color:var(--teal);letter-spacing:1.5px;text-transform:uppercase;font-family:'DM Sans',sans-serif;">Studio Clinic</small>
+    </a>
+    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <i class="fas fa-bars" style="color:var(--navy);"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav mx-auto gap-1">
+        <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="#blog">Blog</a></li>
+        <li class="nav-item"><a class="nav-link" href="#location">Contact Us</a></li>
+      </ul>
+      <div class="d-flex align-items-center gap-3">
+        <a href="tel:+918041234567" class="text-decoration-none" style="color:var(--muted);font-size:.85rem;"><i class="fas fa-phone me-1" style="color:var(--teal);"></i>+91 80-4123-4567</a>
+        <button class="btn-book nav-link" data-bs-toggle="modal" data-bs-target="#bookModal"><i class="fas fa-calendar-check me-1"></i>Book Online</button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO CAROUSEL -->
+<section id="home" class="hero p-0">
+  <div id="heroCarousel" class="carousel slide w-100" data-bs-ride="carousel" data-bs-interval="5000">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
+      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+    </div>
+    <div class="carousel-inner">
+      <!-- Slide 1 -->
+      <div class="carousel-item active">
+        <div class="hero-slide">
+          <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=1920&q=80" alt="Dental Clinic">
+          <div class="container">
+            <div class="hero-content col-lg-7">
+              <div class="hero-badge"><i class="fas fa-award me-1"></i>Bangalore's Trusted Dental Care</div>
+              <h1>Craft Your <span>Perfect Smile</span> with Expert Care</h1>
+              <p>World-class dental treatments with cutting-edge technology. From routine check-ups to complex implants — we cover it all with a gentle touch.</p>
+              <div class="hero-btns">
+                <button class="btn-primary-hero" data-bs-toggle="modal" data-bs-target="#bookModal"><i class="fas fa-calendar-check me-2"></i>Book Appointment</button>
+                <a href="#services" class="btn-outline-hero"><i class="fas fa-tooth me-2"></i>Our Services</a>
+              </div>
+              <div class="hero-stats">
+                <div class="hero-stat"><div class="num">12K+</div><div class="lbl">Happy Patients</div></div>
+                <div class="hero-stat"><div class="num">15+</div><div class="lbl">Years Experience</div></div>
+                <div class="hero-stat"><div class="num">8</div><div class="lbl">Expert Doctors</div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Slide 2 -->
+      <div class="carousel-item">
+        <div class="hero-slide">
+          <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=1920&q=80" alt="Dental Treatment">
+          <div class="container">
+            <div class="hero-content col-lg-7">
+              <div class="hero-badge"><i class="fas fa-star me-1"></i>Advanced Orthodontics</div>
+              <h1>Invisible Braces & <span>Invisalign</span> Specialists</h1>
+              <p>Align your teeth discreetly with our premium Invisalign and clear aligner treatments. No metal. No discomfort. Just results.</p>
+              <div class="hero-btns">
+                <button class="btn-primary-hero" data-bs-toggle="modal" data-bs-target="#bookModal"><i class="fas fa-calendar-check me-2"></i>Free Consultation</button>
+                <a href="#services" class="btn-outline-hero"><i class="fas fa-teeth me-2"></i>Learn More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Slide 3 -->
+      <div class="carousel-item">
+        <div class="hero-slide">
+          <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=1920&q=80" alt="Kids Dental">
+          <div class="container">
+            <div class="hero-content col-lg-7">
+              <div class="hero-badge"><i class="fas fa-child me-1"></i>Special Kids Zone</div>
+              <h1>Gentle Dental Care <span>for Your Little Ones</span></h1>
+              <p>Our dedicated paediatric dental wing ensures your child's first dental experience is positive, fun, and fearless.</p>
+              <div class="hero-btns">
+                <button class="btn-primary-hero" data-bs-toggle="modal" data-bs-target="#bookModal"><i class="fas fa-calendar-check me-2"></i>Book for Kids</button>
+                <a href="#kids" class="btn-outline-hero"><i class="fas fa-heart me-2"></i>Kids Section</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev" style="width:50px;">
+      <span style="background:rgba(255,255,255,.2);width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;"><i class="fas fa-chevron-left text-white"></i></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next" style="width:50px;">
+      <span style="background:rgba(255,255,255,.2);width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;"><i class="fas fa-chevron-right text-white"></i></span>
+    </button>
+  </div>
+</section>
+
+<!-- MARQUEE STRIP -->
+<div class="marquee-strip">
+  <div class="marquee-inner" id="marqueeInner">
+    <span><i class="fas fa-check-circle"></i> Routine Check-up & Cleaning</span>
+    <span><i class="fas fa-star"></i> Teeth Whitening</span>
+    <span><i class="fas fa-align-center"></i> Invisalign Clear Aligners</span>
+    <span><i class="fas fa-tooth"></i> Dental Implants</span>
+    <span><i class="fas fa-heart"></i> Kids Dentistry</span>
+    <span><i class="fas fa-cogs"></i> Braces & Springs</span>
+    <span><i class="fas fa-syringe"></i> Root Canal Treatment</span>
+    <span><i class="fas fa-shield-alt"></i> Deep Cleaning</span>
+    <span><i class="fas fa-check-circle"></i> Routine Check-up & Cleaning</span>
+    <span><i class="fas fa-star"></i> Teeth Whitening</span>
+    <span><i class="fas fa-align-center"></i> Invisalign Clear Aligners</span>
+    <span><i class="fas fa-tooth"></i> Dental Implants</span>
+    <span><i class="fas fa-heart"></i> Kids Dentistry</span>
+    <span><i class="fas fa-cogs"></i> Braces & Springs</span>
+    <span><i class="fas fa-syringe"></i> Root Canal Treatment</span>
+    <span><i class="fas fa-shield-alt"></i> Deep Cleaning</span>
+  </div>
+</div>
+
+<!-- STATS BAR -->
+<div class="stats-bar">
+  <div class="container">
+    <div class="row g-0">
+      <div class="col-6 col-md-3 border-end border-bottom border-md-bottom-0"><div class="stat-item"><div class="big">12<span>K+</span></div><div class="desc">Smiles Transformed</div></div></div>
+      <div class="col-6 col-md-3 border-end border-bottom border-md-bottom-0"><div class="stat-item"><div class="big">15<span>+</span></div><div class="desc">Years of Excellence</div></div></div>
+      <div class="col-6 col-md-3 border-end"><div class="stat-item"><div class="big">98<span>%</span></div><div class="desc">Patient Satisfaction</div></div></div>
+      <div class="col-6 col-md-3"><div class="stat-item"><div class="big">8<span></span></div><div class="desc">Expert Specialists</div></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- SERVICES SECTION -->
+<section id="services" class="services-section">
+  <div class="container">
+    <div class="text-center fade-up">
+      <span class="sec-badge">Our Treatments</span>
+      <h2 class="sec-title">Comprehensive Dental Care<br>Under One Roof</h2>
+      <div class="divider mx-auto"></div>
+      <p class="sec-sub mx-auto">From simple check-ups to complex restorations — experience world-class dental care tailored to every need and every smile.</p>
+    </div>
+    <ul class="nav service-tabs mt-4 fade-up" id="serviceTabs" role="tablist">
+      <li class="nav-item"><button class="nav-link active" data-bs-toggle="tab" data-bs-target="#tab-checkup">Check-up</button></li>
+      <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-whitening">Whitening</button></li>
+      <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-invisalign">Invisalign</button></li>
+      <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-implants">Implants</button></li>
+      <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-wisdom">Wisdom Teeth</button></li>
+      <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-braces">Braces</button></li>
+      <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-rct">Root Canal</button></li>
+      <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-cleaning">Deep Cleaning</button></li>
+    </ul>
+    <div class="tab-content fade-up" id="serviceTabContent">
+      <!-- CHECK-UP -->
+      <div class="tab-pane fade show active" id="tab-checkup">
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="service-card">
+              <div class="svc-icon"><i class="fas fa-stethoscope"></i></div>
+              <h4>Routine Dental Check-up</h4>
+              <p>Comprehensive oral health examination by our experienced dentists. Early detection saves you time, pain, and money.</p>
+              <span class="price-tag">₹500 – ₹800</span>
+              <ul class="service-features mt-3">
+                <li><i class="fas fa-circle"></i> Full Oral Examination</li>
+                <li><i class="fas fa-circle"></i> X-Ray Analysis (if needed)</li>
+                <li><i class="fas fa-circle"></i> Gum Health Assessment</li>
+                <li><i class="fas fa-circle"></i> Personalised Dental Report</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="service-card">
+              <div class="svc-icon"><i class="fas fa-smile"></i></div>
+              <h4>Basic Scaling & Polishing</h4>
+              <p>Professional removal of plaque and tartar buildup, followed by polishing for a fresh, clean feel.</p>
+              <span class="price-tag">₹1,000 – ₹2,500</span>
+              <ul class="service-features mt-3">
+                <li><i class="fas fa-circle"></i> Ultrasonic Scaling</li>
+                <li><i class="fas fa-circle"></i> Hand Scaling</li>
+                <li><i class="fas fa-circle"></i> Tooth Polishing</li>
+                <li><i class="fas fa-circle"></i> Fluoride Application</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="service-card">
+              <div class="svc-icon gold"><i class="fas fa-x-ray"></i></div>
+              <h4>Digital X-Ray & Diagnosis</h4>
+              <p>State-of-the-art digital imaging for accurate diagnosis with 90% less radiation than conventional X-rays.</p>
+              <span class="price-tag gold">₹300 – ₹1,200</span>
+              <ul class="service-features mt-3">
+                <li><i class="fas fa-circle"></i> Digital Periapical X-Ray</li>
+                <li><i class="fas fa-circle"></i> OPG Full Mouth X-Ray</li>
+                <li><i class="fas fa-circle"></i> CBCT 3D Scan</li>
+                <li><i class="fas fa-circle"></i> Caries Detection</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- WHITENING -->
+      <div class="tab-pane fade" id="tab-whitening">
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="service-card">
+              <div class="svc-icon gold"><i class="fas fa-sun"></i></div>
+              <h4>In-Office Laser Whitening</h4>
+              <p>Professional-grade teeth whitening in just one session. Achieve up to 8 shades brighter in under an hour.</p>
+              <span class="price-tag gold">₹8,000 – ₹15,000</span>
+              <ul class="service-features mt-3">
+                <li><i class="fas fa-circle"></i> Zoom Whitening Technology</li>
+                <li><i class="fas fa-circle"></i> Safe & Non-Invasive</li>
+                <li><i class="fas fa-circle"></i> Lasting 2–3 Years</li>
+                <li><i class="fas fa-circle"></i> Sensitivity Protection</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="service-card">
+              <div class="svc-icon"><i class="fas fa-moon"></i></div>
+              <h4>Take-Home Whitening Kit</h4>
+              <p>Custom-fitted trays with professional-grade gel for gradual, effective whitening from the comfort of home.</p>
+              <span class="price-tag">₹3,500 – ₹6,000</span>
+              <ul class="service-features mt-3">
+                <li><i class="fas fa-circle"></i> Custom Trays Included</li>
+                <li><i class="fas fa-circle"></i> 2-Week Treatment Plan</li>
+                <li><i class="fas fa-circle"></i> Supervised by Dentist</li>
+                <li><i class="fas fa-circle"></i> Refill Kits Available</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="service-card">
+              <div class="svc-icon"><i class="fas fa-magic"></i></div>
+              <h4>Composite Veneers</h4>
+              <p>Transform discoloured or chipped teeth with tooth-coloured composite veneers for an instant smile makeover.</p>
+              <span class="price-tag">₹5,000 – ₹9,000 <small>per tooth</small></span>
+              <ul class="service-features mt-3">
+                <li><i class="fas fa-circle"></i> Same-Day Procedure</li>
+                <li><i class="fas fa-circle"></i> Natural Appearance</li>
+                <li><i class="fas fa-circle"></i> Stain Resistant</li>
+                <li><i class="fas fa-circle"></i> Durable & Long-Lasting</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- INVISALIGN -->
+      <div class="tab-pane fade" id="tab-invisalign">
+        <div class="row g-4">
+          <div class="col-md-6">
+            <div class="service-card">
+              <div class="svc-icon"><i class="fas fa-align-center"></i></div>
+              <h4>Invisalign Full Treatment</h4>
+              <p>Virtually invisible clear aligners that straighten your teeth without the hassle of traditional braces. Certified Invisalign providers in Bangalore.</p>
+              <span class="price-tag">₹80,000 – ₹1,80,000</span>
+              <ul class="service-features mt-3">
+                <li><i class="fas fa-circle"></i> 3D Digital Treatment Planning</li>
+                <li><i class="fas fa-circle"></i> Custom Clear Aligners</li>
+                <li><i class="fas fa-circle"></i> Change Every 2 Weeks</li>
+                <li><i class="fas fa-circle"></i> Removable While Eating</li>
+                <li><i class="fas fa-circle"></i> ClinCheck Visualisation</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="service-card">
+              <div class="svc-icon gold"><i class="fas fa-compress-arrows-alt"></i></div>
+              <h4>Invisalign Lite / Go</h4>
+              <p>Perfect for mild to moderate alignment cases. Shorter treatment duration with fewer aligners at a more affordable cost.</p>
+              <span class="price-tag gold">₹45,000 – ₹80,000</span>
+              <ul class="service-features mt-3">
+                <li><i class="fas fa-circle"></i> Ideal for Minor Cases</li>
+                <li><i class="fas fa-circle"></i> Treatment in 3–6 Months</li>
+                <li><i class="fas fa-circle"></i> Retainer Included</li>
+                <li><i class="fas fa-circle"></i> Virtually Invisible</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- IMPLANTS -->
+      <div class="tab-pane fade" id="tab-implants">
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="service-card">
+              <div class="svc-icon"><i class="fas fa-tooth"></i></div>
+              <h4>Single Dental Implant</h4>
+              <p>Titanium root replacement that fuses with your jawbone for a permanent, natural-looking tooth replacement.</p>
+              <span class="price-tag">₹25,000 – ₹50,000 <small>per tooth</small></span>
+              <ul class="service-features mt-3">
+                <li><i class="fas fa-circle"></i> Titanium / Zirconia Implant</li>
+                <li><i class="fas fa-circle"></i> Porcelain Crown Included</li>
+                <li><i class="fas fa-circle"></i> Lifetime Guarantee</li>
+                <li><i class="fas fa-circle"></i> Bone Grafting Available</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="service-card">
+              <div class="svc-icon gold"><i class="fas fa-teeth-open"></i></div>
+              <h4>Full Arch Implants (All-on-4)</h4>
+              <p>Restore an entire arch with just 4 implants. Walk out with a full set of teeth on the same day.</p>
+              <span class="price-tag gold">₹2,50,000 – ₹5,00,000 <small>per arch</small></span>
+              <ul class="service-features mt-3">
+                <li><i class="fas fa-circle"></i> Same-Day Teeth</li>
+                <li><i class="fas fa-circle"></i> Full Arch Restoration</li>
+                <li><i class="fas fa-circle"></i> Fixed, Non-Removable</li>
+                <li><i class="fas fa-circle"></i> 3D CT Guided Surgery</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="service-card">
+              <div class="svc-icon"><i class="fas fa-shield-alt"></i></div>
+              <h4>Implant-Supported Dentures</h4>
+              <p>Stable, comfortable dentures anchored by implants — no more slipping or adhesives required.</p>
+              <span class="price-tag">₹1,20,000 – ₹2,50,000</span>
+              <ul class="service-features mt-3">
+                <li><i class="fas fa-circle"></i> Snap-On Dentures</li>
+                <li><i class="fas fa-circle"></i> Easy Maintenance</li>
+                <li><i class="fas fa-circle"></i> Improved Bite Force</li>
+                <li><i class="fas fa-circle"></i> Natural Appearance</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- WISDOM TEETH -->
+      <div class="tab-pane fade" id="tab-wisdom">
+        <div class="row g-4 justify-content-center">
+          <div class="col-md-5">
+            <div class="service-card">
+              <div class="svc-icon"><i class="fas fa-syringe"></i></div>
+              <h4>Wisdom Tooth Extraction</h4>
+              <p>Pain-free removal of problematic wisdom teeth using advanced surgical techniques. Minimal recovery time.</p>
+              <span class="price-tag">₹3,000 – ₹8,000 <small>per tooth</small></span>
+              <ul class="service-features mt-3">
+                <li><i class="fas fa-circle"></i> Simple & Surgical Extraction</li>
+                <li><i class="fas fa-circle"></i> Local Anaesthesia</li>
+                <li><i class="fas fa-circle"></i> Sedation Option Available</li>
+                <li><i class="fas fa-circle"></i> Post-Op Care Kit Provided</li>
+                <li><i class="fas fa-circle"></i> Follow-Up Included</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-5">
+            <div class="service-card">
+              <div class="svc-icon gold"><i class="fas fa-head-side-cough"></i></div>
+              <h4>Impacted Wisdom Tooth Surgery</h4>
+              <p>Expert surgical extraction for impacted wisdom teeth with 3D scan planning for precise and safe removal.</p>
+              <span class="price-tag gold">₹8,000 – ₹18,000 <small>per tooth</small></span>
+              <ul class="service-features mt-3">
+                <li><i class="fas fa-circle"></i> OPG / CBCT Assessment</li>
+                <li><i class="fas fa-circle"></i> Minimal Invasive Surgery</li>
+                <li><i class="fas fa-circle"></i> Dissolvable Sutures</li>
+                <li><i class="fas fa-circle"></i> Pain Medication Included</li>
+                <li><i class="fas fa-circle"></i> Emergency Same-Day Slots</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- BRACES -->
+      <div class="tab-pane fade" id="tab-braces">
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="service-card">
+              <div class="svc-icon"><i class="fas fa-cogs"></i></div>
+              <h4>Metal Braces</h4>
+              <p>Traditional but effective — high-quality stainless steel braces for comprehensive orthodontic correction.</p>
+              <span class="price-tag">₹20,000 – ₹45,000</span>
+              <ul class="service-features mt-3">
+                <li><i class="fas fa-circle"></i> Standard Metal Brackets</li>
+                <li><i class="fas fa-circle"></i> Self-Ligating Options</li>
+                <li><i class="fas fa-circle"></i> Coloured Bands Available</li>
+                <li><i class="fas fa-circle"></i> 18–24 Month Treatment</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="service-card">
+              <div class="svc-icon gold"><i class="fas fa-star"></i></div>
+              <h4>Ceramic / Sapphire Braces</h4>
+              <p>Tooth-coloured brackets that blend with your natural teeth for a discreet orthodontic treatment.</p>
+              <span class="price-tag gold">₹40,000 – ₹75,000</span>
+              <ul class="service-features mt-3">
+                <li><i class="fas fa-circle"></i> Tooth-Coloured Brackets</li>
+                <li><i class="fas fa-circle"></i> Aesthetically Pleasing</li>
+                <li><i class="fas fa-circle"></i> Strong & Durable</li>
+                <li><i class="fas fa-circle"></i> Less Noticeable</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="service-card">
+              <div class="svc-icon"><i class="fas fa-compress-arrows-alt"></i></div>
+              <h4>Springs & Aligners Combo</h4>
+              <p>Auxiliary springs combined with braces for faster movement of specific teeth — commonly used for space closure and jaw alignment.</p>
+              <span class="price-tag">₹5,000 – ₹12,000 <small>additional</small></span>
+              <ul class="service-features mt-3">
+                <li><i class="fas fa-circle"></i> Pendulum Springs</li>
+                <li><i class="fas fa-circle"></i> Coil Springs</li>
+                <li><i class="fas fa-circle"></i> Palatal Expanders</li>
+                <li><i class="fas fa-circle"></i> Habit-Breaking Appliances</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ROOT CANAL -->
+      <div class="tab-pane fade" id="tab-rct">
+        <div class="row g-4 justify-content-center">
+          <div class="col-md-5">
+            <div class="service-card">
+              <div class="svc-icon"><i class="fas fa-procedures"></i></div>
+              <h4>Root Canal Treatment (RCT)</h4>
+              <p>Save your natural tooth from extraction with our painless, single-sitting root canal treatment using rotary endodontics.</p>
+              <span class="price-tag">₹5,000 – ₹12,000 <small>per tooth</small></span>
+              <ul class="service-features mt-3">
+                <li><i class="fas fa-circle"></i> Painless Rotary RCT</li>
+                <li><i class="fas fa-circle"></i> Single Sitting Option</li>
+                <li><i class="fas fa-circle"></i> Microscope-Assisted</li>
+                <li><i class="fas fa-circle"></i> Post & Core if Required</li>
+                <li><i class="fas fa-circle"></i> Permanent Crown Follow-up</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-5">
+            <div class="service-card">
+              <div class="svc-icon gold"><i class="fas fa-crown"></i></div>
+              <h4>Post-RCT Crown Restoration</h4>
+              <p>Protect your root-canal-treated tooth with a high-quality ceramic or zirconia crown for long-term strength and aesthetics.</p>
+              <span class="price-tag gold">₹6,000 – ₹18,000 <small>per crown</small></span>
+              <ul class="service-features mt-3">
+                <li><i class="fas fa-circle"></i> Zirconia / E-max Crown</li>
+                <li><i class="fas fa-circle"></i> Metal-Free Option</li>
+                <li><i class="fas fa-circle"></i> Shade-Matched</li>
+                <li><i class="fas fa-circle"></i> 5-Year Warranty</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- DEEP CLEANING -->
+      <div class="tab-pane fade" id="tab-cleaning">
+        <div class="row g-4 justify-content-center">
+          <div class="col-md-5">
+            <div class="service-card">
+              <div class="svc-icon"><i class="fas fa-broom"></i></div>
+              <h4>Deep Cleaning (Scaling & Root Planing)</h4>
+              <p>Thorough removal of tartar, plaque, and bacteria from below the gum line to treat and prevent gum disease.</p>
+              <span class="price-tag">₹2,000 – ₹5,000</span>
+              <ul class="service-features mt-3">
+                <li><i class="fas fa-circle"></i> Ultrasonic Deep Cleaning</li>
+                <li><i class="fas fa-circle"></i> Root Surface Planing</li>
+                <li><i class="fas fa-circle"></i> Antimicrobial Therapy</li>
+                <li><i class="fas fa-circle"></i> Gum Disease Treatment</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-5">
+            <div class="service-card">
+              <div class="svc-icon gold"><i class="fas fa-heartbeat"></i></div>
+              <h4>Periodontal Maintenance</h4>
+              <p>Ongoing gum health monitoring and maintenance to prevent recurrence of periodontal disease.</p>
+              <span class="price-tag gold">₹1,500 – ₹3,000</span>
+              <ul class="service-features mt-3">
+                <li><i class="fas fa-circle"></i> 3–6 Month Recall Visit</li>
+                <li><i class="fas fa-circle"></i> Pocket Depth Monitoring</li>
+                <li><i class="fas fa-circle"></i> Oral Hygiene Coaching</li>
+                <li><i class="fas fa-circle"></i> Customised Homecare Plan</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- KIDS SECTION -->
+<section id="kids" class="kids-section">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-5 fade-up">
+        <div style="border-radius:24px;overflow:hidden;box-shadow:0 12px 40px rgba(0,0,0,.1);">
+          <img src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?w=600&q=80" alt="Kids Dentistry" style="width:100%;height:420px;object-fit:cover;">
+        </div>
+      </div>
+      <div class="col-lg-7 fade-up">
+        <span class="kids-badge"><i class="fas fa-child me-2"></i>Paediatric Dentistry</span>
+        <h2 class="sec-title">Special Care Zone<br>for Our <span style="color:var(--teal);">Little Champions</span></h2>
+        <div class="divider"></div>
+        <p style="color:var(--muted);line-height:1.8;margin-bottom:24px;">Our dedicated children's dental wing is designed to make dental visits fun and stress-free. From cartoon-themed rooms to gentle, patient dentists — we ensure your child's oral health journey begins with joy, not fear.</p>
+        <div class="row g-3">
+          <div class="col-sm-6">
+            <div class="kids-feature"><i class="fas fa-baby"></i><span>Baby Tooth Check-up – ₹400</span></div>
+            <div class="kids-feature"><i class="fas fa-shield-virus"></i><span>Fluoride & Sealant – ₹800</span></div>
+            <div class="kids-feature"><i class="fas fa-tooth"></i><span>Milk Tooth Extraction – ₹700</span></div>
+          </div>
+          <div class="col-sm-6">
+            <div class="kids-feature"><i class="fas fa-smile-beam"></i><span>Space Maintainers – ₹3,000</span></div>
+            <div class="kids-feature"><i class="fas fa-star"></i><span>Habit Breaking – ₹4,000</span></div>
+            <div class="kids-feature"><i class="fas fa-palette"></i><span>Fun Tooth Painting</span></div>
+          </div>
+        </div>
+        <div class="mt-4 p-4 rounded-4" style="background:rgba(59,168,168,.08);border:1px dashed rgba(59,168,168,.3);">
+          <div class="d-flex gap-3 align-items-center">
+            <div style="font-size:2.5rem;">🌈</div>
+            <div>
+              <strong style="color:var(--navy);font-size:.95rem;">First Visit is FREE for Kids under 5!</strong>
+              <p style="color:var(--muted);font-size:.83rem;margin:3px 0 0;">Bring your little one for a complimentary first check-up. No appointments needed on weekday mornings.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section class="why-section">
+  <div class="container position-relative" style="z-index:1;">
+    <div class="text-center mb-5 fade-up">
+      <span class="sec-badge" style="background:rgba(59,168,168,.2);color:var(--teal);">Why Choose Us</span>
+      <h2 class="sec-title text-white mt-2">Why Thousands of Patients<br>Trust Pearl Dental Studio</h2>
+      <div class="divider mx-auto"></div>
+    </div>
+    <div class="row g-4 fade-up">
+      <div class="col-md-6 col-lg-3">
+        <div class="why-card">
+          <div class="why-icon"><i class="fas fa-user-md"></i></div>
+          <h5>Expert Specialists</h5>
+          <p>8 qualified specialists with international training and decades of combined experience.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="why-card">
+          <div class="why-icon"><i class="fas fa-microscope"></i></div>
+          <h5>Latest Technology</h5>
+          <p>Digital X-rays, 3D CBCT scans, laser dentistry, and CAD/CAM same-day crowns.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="why-card">
+          <div class="why-icon"><i class="fas fa-hand-holding-heart"></i></div>
+          <h5>Pain-Free Experience</h5>
+          <p>Advanced numbing techniques and sedation options to ensure zero anxiety during treatment.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="why-card">
+          <div class="why-icon"><i class="fas fa-rupee-sign"></i></div>
+          <h5>Transparent Pricing</h5>
+          <p>No hidden fees. Clear treatment plans with EMI options and insurance assistance available.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="why-card">
+          <div class="why-icon"><i class="fas fa-clock"></i></div>
+          <h5>Flexible Timings</h5>
+          <p>Open 7 days a week including Sundays. Early morning and evening slots available.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="why-card">
+          <div class="why-icon"><i class="fas fa-shield-alt"></i></div>
+          <h5>Strict Sterilisation</h5>
+          <p>Hospital-grade sterilisation protocols exceeding Indian dental association standards.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="why-card">
+          <div class="why-icon"><i class="fas fa-child"></i></div>
+          <h5>Family-Friendly</h5>
+          <p>Dedicated kids zone, comfortable waiting area, and in-clinic entertainment for the whole family.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="why-card">
+          <div class="why-icon"><i class="fas fa-headset"></i></div>
+          <h5>24/7 Support</h5>
+          <p>Round-the-clock WhatsApp support and emergency dental care available on-call.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT US -->
+<section id="about" class="about-section">
+  <div class="container">
+    <div class="row align-items-center g-5 mb-5">
+      <div class="col-lg-6 fade-up">
+        <div class="about-img-wrap">
+          <img src="https://images.unsplash.com/photo-1551190822-a9333d879b1f?w=700&q=80" alt="Pearl Dental Studio Clinic">
+          <div class="about-badge-float">
+            <div class="num">15+</div>
+            <div class="txt">Years Serving Bangalore</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 fade-up">
+        <span class="sec-badge">About Us</span>
+        <h2 class="sec-title">We're More Than a Clinic —<br>We're Your Smile Partners</h2>
+        <div class="divider"></div>
+        <p style="color:var(--muted);line-height:1.8;margin-bottom:16px;">Founded in 2009, Pearl Dental Studio Clinic in Bangalore was built on a single belief — that every patient deserves world-class dental care in a warm, welcoming environment.</p>
+        <p style="color:var(--muted);line-height:1.8;margin-bottom:24px;">Our state-of-the-art facility in Koramangala, Bangalore is equipped with the latest dental technology. From children's first visits to complex full-mouth rehabilitations — we do it all with precision and compassion.</p>
+        <div class="row g-3">
+          <div class="col-6">
+            <div class="p-3 rounded-3 text-center" style="background:var(--soft);">
+              <div style="font-size:1.8rem;color:var(--teal);font-family:'Playfair Display',serif;font-weight:700;">ISO</div>
+              <div style="font-size:.78rem;color:var(--muted);">9001:2015 Certified</div>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="p-3 rounded-3 text-center" style="background:var(--soft);">
+              <div style="font-size:1.8rem;color:var(--gold);font-family:'Playfair Display',serif;font-weight:700;">IDA</div>
+              <div style="font-size:.78rem;color:var(--muted);">Member Clinic</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- TEAM -->
+    <div class="text-center mb-4 fade-up">
+      <span class="sec-badge">Meet The Team</span>
+      <h2 class="sec-title">Our Expert Doctors</h2>
+      <div class="divider mx-auto"></div>
+    </div>
+    <div class="row g-4 fade-up">
+      <div class="col-6 col-lg-3">
+        <div class="doctor-card">
+          <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=400&q=80" alt="Dr Priya Sharma" class="doctor-img">
+          <div class="doctor-info">
+            <h5>Dr. Priya Sharma</h5>
+            <div class="role">Chief Dental Surgeon</div>
+            <p>MDS Prosthodontics, 18 yrs exp.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-lg-3">
+        <div class="doctor-card">
+          <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=400&q=80" alt="Dr Arjun Nair" class="doctor-img">
+          <div class="doctor-info">
+            <h5>Dr. Arjun Nair</h5>
+            <div class="role">Orthodontist</div>
+            <p>MDS Orthodontics, Invisalign Gold Provider, 12 yrs exp.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-lg-3">
+        <div class="doctor-card">
+          <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=400&q=80" alt="Dr Meena Iyer" class="doctor-img">
+          <div class="doctor-info">
+            <h5>Dr. Meena Iyer</h5>
+            <div class="role">Paediatric Dentist</div>
+            <p>MDS Paedodontics, child care specialist, 10 yrs exp.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-lg-3">
+        <div class="doctor-card">
+          <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=400&q=80" alt="Dr Rohit Verma" class="doctor-img">
+          <div class="doctor-info">
+            <h5>Dr. Rohit Verma</h5>
+            <div class="role">Oral & Maxillofacial Surgeon</div>
+            <p>MDS OMFS, implants specialist, 14 yrs exp.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials-section">
+  <div class="container">
+    <div class="text-center mb-5 fade-up">
+      <span class="sec-badge">Patient Reviews</span>
+      <h2 class="sec-title">What Our Patients Say</h2>
+      <div class="divider mx-auto"></div>
+    </div>
+    <div id="testiCarousel" class="carousel slide fade-up" data-bs-ride="carousel" data-bs-interval="4000">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="row g-4">
+            <div class="col-md-4">
+              <div class="testi-card">
+                <div class="stars">★★★★★</div>
+                <p>"Absolutely amazing experience! I was terrified of the dentist but the team at Pearl Dental made me feel so comfortable. My Invisalign treatment turned out perfectly!"</p>
+                <div class="testi-author"><div class="testi-avatar">RS</div><div><div class="testi-name">Ravi Shankar</div><div class="testi-loc"><i class="fas fa-map-marker-alt me-1"></i>Koramangala, Bangalore</div></div></div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="testi-card">
+                <div class="stars">★★★★★</div>
+                <p>"Dr. Meena is absolutely wonderful with my 6-year-old. My daughter actually looks forward to her dental visits now. The kids zone is so cute and well-designed!"</p>
+                <div class="testi-author"><div class="testi-avatar">PK</div><div><div class="testi-name">Preethi Krishnamurthy</div><div class="testi-loc"><i class="fas fa-map-marker-alt me-1"></i>HSR Layout, Bangalore</div></div></div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="testi-card">
+                <div class="stars">★★★★★</div>
+                <p>"Had my dental implants done here. The entire process was explained step by step. No pain, no fear. Results are incredible — looks and feels like real teeth!"</p>
+                <div class="testi-author"><div class="testi-avatar">AM</div><div><div class="testi-name">Anil Mehta</div><div class="testi-loc"><i class="fas fa-map-marker-alt me-1"></i>Indiranagar, Bangalore</div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="row g-4">
+            <div class="col-md-4">
+              <div class="testi-card">
+                <div class="stars">★★★★★</div>
+                <p>"Teeth whitening results were beyond my expectations. Within one session I was 7 shades brighter! Dr. Priya was very professional and gentle throughout."</p>
+                <div class="testi-author"><div class="testi-avatar">SG</div><div><div class="testi-name">Swathi Gowda</div><div class="testi-loc"><i class="fas fa-map-marker-alt me-1"></i>JP Nagar, Bangalore</div></div></div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="testi-card">
+                <div class="stars">★★★★★</div>
+                <p>"Had a wisdom tooth removed. Was scared it would be very painful but it was quick and almost painless. Post-op instructions were very clear. Highly recommend!"</p>
+                <div class="testi-author"><div class="testi-avatar">VR</div><div><div class="testi-name">Varun Reddy</div><div class="testi-loc"><i class="fas fa-map-marker-alt me-1"></i>Whitefield, Bangalore</div></div></div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="testi-card">
+                <div class="stars">★★★★★</div>
+                <p>"Best dental clinic in Bangalore, hands down. Transparent pricing, no upselling, and the quality of work is exceptional. My braces treatment was worth every rupee!"</p>
+                <div class="testi-author"><div class="testi-avatar">NB</div><div><div class="testi-name">Nisha Bhatt</div><div class="testi-loc"><i class="fas fa-map-marker-alt me-1"></i>Malleshwaram, Bangalore</div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="row g-4">
+            <div class="col-md-4">
+              <div class="testi-card">
+                <div class="stars">★★★★★</div>
+                <p>"Root canal with no pain! I was nervous but Dr. Rohit made the whole procedure so comfortable. I was back at work the next day. Thank you Pearl Dental!"</p>
+                <div class="testi-author"><div class="testi-avatar">KP</div><div><div class="testi-name">Karthik Pillai</div><div class="testi-loc"><i class="fas fa-map-marker-alt me-1"></i>Electronic City, Bangalore</div></div></div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="testi-card">
+                <div class="stars">★★★★★</div>
+                <p>"The clinic is spotlessly clean. Staff is very warm. Booking through their website was super easy. Pearl Dental is my family's go-to clinic now."</p>
+                <div class="testi-author"><div class="testi-avatar">DC</div><div><div class="testi-name">Deepika Chandra</div><div class="testi-loc"><i class="fas fa-map-marker-alt me-1"></i>Sadashivanagar, Bangalore</div></div></div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="testi-card">
+                <div class="stars">★★★★★</div>
+                <p>"Got ceramic braces and they look nearly invisible. Dr. Arjun is an excellent orthodontist. Very patient, explains everything clearly. Results in just 14 months!"</p>
+                <div class="testi-author"><div class="testi-avatar">MJ</div><div><div class="testi-name">Mohammed Javed</div><div class="testi-loc"><i class="fas fa-map-marker-alt me-1"></i>Shivajinagar, Bangalore</div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="d-flex justify-content-center gap-3 mt-4">
+        <button class="btn btn-sm" data-bs-target="#testiCarousel" data-bs-slide="prev" style="background:var(--soft);color:var(--navy);border:none;width:40px;height:40px;border-radius:50%;"><i class="fas fa-chevron-left"></i></button>
+        <button class="btn btn-sm" data-bs-target="#testiCarousel" data-bs-slide="next" style="background:var(--teal);color:#fff;border:none;width:40px;height:40px;border-radius:50%;"><i class="fas fa-chevron-right"></i></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BLOG -->
+<section id="blog" class="blog-section">
+  <div class="container">
+    <div class="text-center mb-5 fade-up">
+      <span class="sec-badge">Dental Insights</span>
+      <h2 class="sec-title">Latest from Our Blog</h2>
+      <div class="divider mx-auto"></div>
+    </div>
+    <div class="row g-4 fade-up">
+      <div class="col-md-4">
+        <div class="blog-card">
+          <img src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?w=600&q=80" class="blog-img" alt="Blog">
+          <div class="blog-body">
+            <div class="blog-cat">Oral Hygiene</div>
+            <h5>10 Foods That Are Secretly Destroying Your Teeth</h5>
+            <p>Discover which everyday foods cause hidden damage to your enamel — and what to eat instead for a healthier smile.</p>
+            <div class="blog-meta"><span><i class="fas fa-calendar me-1"></i>April 28, 2025</span><span><i class="fas fa-clock me-1"></i>5 min read</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="blog-card">
+          <img src="https://images.unsplash.com/photo-1571772996211-2f02c9727629?w=600&q=80" class="blog-img" alt="Blog">
+          <div class="blog-body">
+            <div class="blog-cat">Cosmetic Dentistry</div>
+            <h5>Invisalign vs Metal Braces — Which is Right for You?</h5>
+            <p>A comprehensive comparison of both orthodontic options to help you make the best decision for your lifestyle and budget.</p>
+            <div class="blog-meta"><span><i class="fas fa-calendar me-1"></i>April 14, 2025</span><span><i class="fas fa-clock me-1"></i>7 min read</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="blog-card">
+          <img src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?w=600&q=80" class="blog-img" alt="Blog">
+          <div class="blog-body">
+            <div class="blog-cat">Kids Dentistry</div>
+            <h5>When Should Your Child Have Their First Dental Visit?</h5>
+            <p>Paediatric dentists recommend the first visit by age 1. Here's everything parents need to know to prepare.</p>
+            <div class="blog-meta"><span><i class="fas fa-calendar me-1"></i>March 30, 2025</span><span><i class="fas fa-clock me-1"></i>4 min read</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LOCATION -->
+<section id="location" class="location-section">
+  <div class="container">
+    <div class="text-center mb-5 fade-up">
+      <span class="sec-badge">Find Us</span>
+      <h2 class="sec-title">Visit Our Clinic in Bangalore</h2>
+      <div class="divider mx-auto"></div>
+    </div>
+    <div class="row g-4 fade-up">
+      <div class="col-lg-5">
+        <div class="contact-info-card">
+          <h4 style="color:var(--navy);margin-bottom:4px;">Pearl Dental Studio Clinic</h4>
+          <p style="color:var(--teal);font-size:.85rem;font-weight:600;margin-bottom:24px;">Koramangala, Bangalore</p>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div><h6>Address</h6><p>42, 5th Block, Koramangala,<br>Near Forum Mall, Bangalore – 560095</p></div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-phone"></i></div>
+            <div><h6>Phone</h6><a href="tel:+918041234567">+91 80-4123-4567</a><br><a href="tel:+919845678901">+91 98456-78901</a></div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fab fa-whatsapp"></i></div>
+            <div><h6>WhatsApp</h6><a href="https://wa.me/919845678901">Chat with us on WhatsApp</a></div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+            <div><h6>Email</h6><a href="mailto:hello@pearldentalstudio.in">hello@pearldentalstudio.in</a></div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-clock"></i></div>
+            <div><h6>Clinic Timings</h6><p>Mon – Sat: 9:00 AM – 8:00 PM<br>Sunday: 10:00 AM – 4:00 PM<br>Emergency: 24/7 (Call)</p></div>
+          </div>
+          <button class="btn-submit mt-3" data-bs-toggle="modal" data-bs-target="#bookModal"><i class="fas fa-calendar-check me-2"></i>Book Appointment Now</button>
+        </div>
+      </div>
+      <div class="col-lg-7">
+        <div class="map-container" style="height:100%;min-height:400px;">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.5889485764927!2d77.6200!3d12.9352!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1440af2a3ced%3A0x56ec92b1c2e9a97a!2sKoramangala%2C%20Bengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1" width="100%" height="100%" style="border:0;min-height:400px;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VOICE AGENT SECTION -->
+<section style="background:#fff;padding:80px 0;">
+  <div class="container">
+    <div class="text-center mb-5 fade-up">
+      <span class="sec-badge" style="background:#fdf3e8;color:var(--gold);">AI Voice Assistant</span>
+      <h2 class="sec-title">Meet <span style="color:var(--teal);">Juhi</span> — Your 24/7 Dental Assistant</h2>
+      <div class="divider mx-auto"></div>
+      <p class="sec-sub mx-auto">Juhi is our friendly AI voice assistant who speaks Hinglish (Hindi + English). She can answer your dental queries, help you book appointments, explain treatments, and guide you through your dental care journey — anytime, anywhere!</p>
+    </div>
+    <div class="row align-items-center g-5 fade-up">
+      <div class="col-lg-5 text-center">
+        <div style="width:200px;height:200px;background:linear-gradient(135deg,var(--teal),var(--navy));border-radius:50%;margin:0 auto;display:flex;align-items:center;justify-content:center;box-shadow:0 20px 60px rgba(59,168,168,.4);position:relative;">
+          <span style="font-size:5rem;">👩‍⚕️</span>
+          <div style="position:absolute;inset:-8px;border-radius:50%;border:3px solid rgba(59,168,168,.3);animation:pulse 2s infinite;"></div>
+          <div style="position:absolute;inset:-18px;border-radius:50%;border:2px solid rgba(59,168,168,.15);animation:pulse 2s infinite .5s;"></div>
+        </div>
+        <h3 style="margin-top:24px;color:var(--navy);">Juhi</h3>
+        <p style="color:var(--teal);font-weight:600;font-size:.9rem;">AI Dental Assistant • Hinglish</p>
+        <p style="color:var(--muted);font-size:.85rem;max-width:280px;margin:10px auto;">Click the floating button in the bottom-right corner to start talking to Juhi!</p>
+      </div>
+      <div class="col-lg-7">
+        <div class="row g-3">
+          <div class="col-sm-6">
+            <div class="p-4 rounded-4 h-100" style="background:var(--soft);border:1px solid rgba(59,168,168,.2);">
+              <div style="font-size:1.8rem;margin-bottom:10px;">🎤</div>
+              <h6 style="color:var(--navy);font-size:.92rem;font-weight:700;">Voice Interaction</h6>
+              <p style="color:var(--muted);font-size:.82rem;line-height:1.6;">Talk naturally in Hindi, English, or Hinglish. Juhi understands and responds like a real dental receptionist.</p>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="p-4 rounded-4 h-100" style="background:#fdf3e8;border:1px solid rgba(200,151,90,.2);">
+              <div style="font-size:1.8rem;margin-bottom:10px;">📅</div>
+              <h6 style="color:var(--navy);font-size:.92rem;font-weight:700;">Appointment Booking</h6>
+              <p style="color:var(--muted);font-size:.82rem;line-height:1.6;">Juhi helps you book appointments and opens the booking form with your details pre-filled.</p>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="p-4 rounded-4 h-100" style="background:#f0fff4;border:1px solid rgba(40,167,69,.15);">
+              <div style="font-size:1.8rem;margin-bottom:10px;">💬</div>
+              <h6 style="color:var(--navy);font-size:.92rem;font-weight:700;">Treatment Queries</h6>
+              <p style="color:var(--muted);font-size:.82rem;line-height:1.6;">Ask about any treatment, cost, recovery time, or procedure. Juhi gives clear, helpful answers.</p>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="p-4 rounded-4 h-100" style="background:var(--soft);border:1px solid rgba(59,168,168,.2);">
+              <div style="font-size:1.8rem;margin-bottom:10px;">⏰</div>
+              <h6 style="color:var(--navy);font-size:.92rem;font-weight:700;">24/7 Availability</h6>
+              <p style="color:var(--muted);font-size:.82rem;line-height:1.6;">Juhi is always available — even at midnight when you have a dental emergency question.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOLLOW US / FOOTER -->
+<div class="follow-section" id="follow">
+  <div class="container">
+    <div class="text-center mb-4 fade-up">
+      <span class="sec-badge" style="background:rgba(59,168,168,.2);color:var(--teal);">Stay Connected</span>
+      <h2 class="sec-title text-white mt-2">Follow Pearl Dental Studio</h2>
+      <p style="color:rgba(255,255,255,.55);font-size:.95rem;max-width:500px;margin:.5rem auto 0;">Stay updated with dental tips, before & after transformations, special offers, and clinic news!</p>
+      <div style="margin-top:28px;display:flex;justify-content:center;flex-wrap:wrap;">
+        <a href="https://instagram.com" target="_blank" class="social-btn insta"><i class="fab fa-instagram"></i>@PearlDentalStudio</a>
+        <a href="https://facebook.com" target="_blank" class="social-btn fb"><i class="fab fa-facebook-f"></i>Pearl Dental Studio</a>
+        <a href="https://wa.me/919845678901" target="_blank" class="social-btn wa"><i class="fab fa-whatsapp"></i>WhatsApp Us</a>
+        <a href="mailto:hello@pearldentalstudio.in" class="social-btn email"><i class="fas fa-envelope"></i>hello@pearldentalstudio.in</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-logo">Pearl <span style="color:var(--teal);">Dental</span> Studio</div>
+      <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#blog">Blog</a>
+        <a href="#location">Contact</a>
+        <a href="#">Privacy Policy</a>
+      </div>
+      <div class="copyright">© 2025 Pearl Dental Studio Clinic, Bangalore. All Rights Reserved.</div>
+    </div>
+  </div>
+</div>
+
+<!-- BOOK ONLINE MODAL -->
+<div class="modal fade" id="bookModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div>
+          <h5 class="modal-title mb-0"><i class="fas fa-calendar-check me-2"></i>Book Your Appointment</h5>
+          <p style="color:rgba(255,255,255,.65);font-size:.82rem;margin:4px 0 0;">Pearl Dental Studio, Koramangala, Bangalore</p>
+        </div>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body" id="bookModalBody">
+        <form id="bookingForm">
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label class="form-label">Full Name *</label>
+              <input type="text" class="form-control" id="bkName" placeholder="Enter your full name" required>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Email Address *</label>
+              <input type="email" class="form-control" id="bkEmail" placeholder="your@email.com" required>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Phone Number *</label>
+              <input type="tel" class="form-control" id="bkPhone" placeholder="+91 98765 43210" required>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Reason for Visit *</label>
+              <select class="form-select" id="bkReason" required>
+                <option value="">Select treatment / reason</option>
+                <option>Routine Check-up & Cleaning</option>
+                <option>Teeth Whitening</option>
+                <option>Invisalign Consultation</option>
+                <option>Dental Implants</option>
+                <option>Wisdom Tooth Removal</option>
+                <option>Braces / Orthodontics</option>
+                <option>Root Canal Treatment</option>
+                <option>Deep Cleaning</option>
+                <option>Kids Dental Check-up</option>
+                <option>Emergency / Pain</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Preferred Date *</label>
+              <input type="date" class="form-control" id="bkDate" required>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Preferred Time Slot *</label>
+              <select class="form-select" id="bkTime" required>
+                <option value="">Select a time slot</option>
+                <option>09:00 AM – 10:00 AM</option>
+                <option>10:00 AM – 11:00 AM</option>
+                <option>11:00 AM – 12:00 PM</option>
+                <option>12:00 PM – 01:00 PM</option>
+                <option>02:00 PM – 03:00 PM</option>
+                <option>03:00 PM – 04:00 PM</option>
+                <option>04:00 PM – 05:00 PM</option>
+                <option>05:00 PM – 06:00 PM</option>
+                <option>06:00 PM – 07:00 PM</option>
+                <option>07:00 PM – 08:00 PM</option>
+              </select>
+            </div>
+            <div class="col-12">
+              <label class="form-label">Additional Notes</label>
+              <textarea class="form-control" id="bkNotes" rows="3" placeholder="Any additional information, allergies, or concerns..."></textarea>
+            </div>
+            <div class="col-12">
+              <div class="p-3 rounded-3" style="background:var(--soft);border:1px solid rgba(59,168,168,.2);display:flex;align-items:flex-start;gap:12px;">
+                <i class="fas fa-info-circle mt-1" style="color:var(--teal);"></i>
+                <p style="font-size:.82rem;color:var(--muted);margin:0;">You will receive a confirmation email/SMS once your appointment is confirmed. Our team will call you within 2 hours to confirm the slot. For emergencies, call us directly at <strong>+91 80-4123-4567</strong>.</p>
+              </div>
+            </div>
+            <div class="col-12">
+              <button type="submit" class="btn-submit"><i class="fas fa-calendar-check me-2"></i>Confirm Appointment</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- VOICE AGENT JUHI - FIXED FAB -->
+<div id="juhi-fab">
+  <div class="juhi-label">Chat with Juhi</div>
+  <div class="juhi-bubble" id="juhiFab" onclick="toggleJuhi()">
+    <div class="juhi-pulse"></div>
+    <span style="font-size:1.6rem;">👩‍⚕️</span>
+  </div>
+</div>
+
+<!-- JUHI PANEL -->
+<div class="juhi-panel" id="juhiPanel">
+  <div class="juhi-header">
+    <div class="juhi-avatar">👩‍⚕️</div>
+    <div class="juhi-info">
+      <h6>Juhi — AI Dental Assistant</h6>
+      <div class="status" id="juhiStatus">Online &amp; Ready to Help</div>
+    </div>
+    <div style="display:flex;gap:6px;position:absolute;right:14px;top:50%;transform:translateY(-50%);">
+      <button class="juhi-close-btn" id="juhiEndBtn" onclick="endJuhiCall()" title="End Call" style="background:rgba(231,76,60,.3);color:#fff;"><i class="fas fa-phone-slash"></i></button>
+      <button class="juhi-close-btn" onclick="closeJuhiPanel()" title="Minimise"><i class="fas fa-minus"></i></button>
+    </div>
+  </div>
+  <div class="juhi-chat" id="juhiChat"></div>
+  <!-- Typing indicator -->
+  <div id="juhiTyping" style="display:none;padding:6px 16px 0;">
+    <div style="display:inline-flex;gap:5px;align-items:center;background:var(--soft);padding:8px 14px;border-radius:14px;border-bottom-left-radius:4px;">
+      <span style="width:7px;height:7px;background:var(--teal);border-radius:50%;animation:dotBounce .9s infinite;display:inline-block;"></span>
+      <span style="width:7px;height:7px;background:var(--teal);border-radius:50%;animation:dotBounce .9s .15s infinite;display:inline-block;"></span>
+      <span style="width:7px;height:7px;background:var(--teal);border-radius:50%;animation:dotBounce .9s .3s infinite;display:inline-block;"></span>
+      <span style="font-size:.72rem;color:var(--muted);margin-left:4px;" id="juhiTypingLabel">Juhi typing...</span>
+    </div>
+  </div>
+  <div class="juhi-controls">
+    <div class="juhi-text-input">
+      <input type="text" id="juhiInput" placeholder="Type here..." onkeydown="if(event.key==='Enter')sendToJuhi()">
+      <button class="juhi-send" onclick="sendToJuhi()"><i class="fas fa-paper-plane"></i></button>
+    </div>
+    <div class="juhi-mic-row">
+      <button class="juhi-mic" id="juhiMicBtn" onclick="toggleMic()">
+        <i class="fas fa-microphone" id="micIcon"></i>
+      </button>
+      <span class="juhi-mic-hint" id="micHint">Tap mic &amp; speak</span>
+    </div>
+    <!-- Dynamic quick-reply buttons — populated by JS -->
+    <div id="quickReplies" style="display:flex;flex-wrap:wrap;gap:5px;margin-top:4px;"></div>
+  </div>
+
+  <!-- Booking review card — shown at end of conversational booking -->
+  <div class="juhi-booking-form" id="juhiBookingForm" style="display:none;">
+    <h6 style="color:var(--navy);font-size:.88rem;font-weight:700;margin-bottom:12px;">
+      <i class="fas fa-calendar-check me-1" style="color:var(--teal);"></i>Review &amp; Confirm Appointment
+    </h6>
+    <div id="bookingSummaryCard" style="background:var(--soft);border-radius:10px;padding:12px;margin-bottom:10px;font-size:.8rem;line-height:1.9;color:var(--navy);"></div>
+    <!-- Editable fields only if user wants to change something -->
+    <input type="text"  id="jbName"   placeholder="Full Name *"      style="display:none;">
+    <input type="email" id="jbEmail"  placeholder="Email Address *"   style="display:none;">
+    <input type="tel"   id="jbPhone"  placeholder="Phone Number"      style="display:none;">
+    <select             id="jbReason" style="display:none;">
+      <option value="">Reason *</option>
+      <option>Routine Check-up</option><option>Teeth Whitening</option><option>Invisalign</option>
+      <option>Dental Implants</option><option>Wisdom Tooth</option><option>Braces</option>
+      <option>Root Canal</option><option>Deep Cleaning</option><option>Kids Dental</option><option>Emergency</option>
+    </select>
+    <input type="date"  id="jbDate"   style="display:none;">
+    <select             id="jbTime"   style="display:none;">
+      <option value="">Time Slot *</option>
+      <option>09:00 AM – 10:00 AM</option><option>10:00 AM – 11:00 AM</option>
+      <option>11:00 AM – 12:00 PM</option><option>02:00 PM – 03:00 PM</option>
+      <option>04:00 PM – 05:00 PM</option><option>06:00 PM – 07:00 PM</option>
+    </select>
+    <div style="display:flex;gap:8px;">
+      <button class="juhi-confirm-btn" onclick="finalConfirmBooking()" style="flex:1;">
+        <i class="fas fa-check me-1"></i>Confirm Booking
+      </button>
+      <button onclick="cancelBookingFlow()" style="flex:0 0 auto;background:#f0f0f0;color:var(--navy);border:none;border-radius:8px;padding:9px 14px;font-size:.8rem;font-weight:600;cursor:pointer;">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+/* =========================================================
+   PRELOADER
+   ========================================================= */
+window.addEventListener('load', () => {
+  setTimeout(() => {
+    const pre = document.getElementById('preloader');
+    pre.style.opacity = '0';
+    setTimeout(() => pre.style.display = 'none', 500);
+  }, 1600);
+});
+
+/* =========================================================
+   SCROLL ANIMATIONS
+   ========================================================= */
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.1 });
+document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+/* =========================================================
+   BOOKING FORM SUBMIT
+   ========================================================= */
+document.getElementById('bookingForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const name = document.getElementById('bkName').value;
+  const email = document.getElementById('bkEmail').value;
+  const reason = document.getElementById('bkReason').value;
+  const date = document.getElementById('bkDate').value;
+  const time = document.getElementById('bkTime').value;
+  document.getElementById('bookModalBody').innerHTML = `
+    <div class="text-center py-4">
+      <div style="width:80px;height:80px;background:var(--soft);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:2.5rem;margin:0 auto 20px;">✅</div>
+      <h4 style="color:var(--navy);margin-bottom:10px;">Appointment Confirmed!</h4>
+      <p style="color:var(--muted);margin-bottom:6px;">Thank you, <strong>${name}</strong>!</p>
+      <p style="color:var(--muted);font-size:.9rem;margin-bottom:20px;">Your appointment for <strong>${reason}</strong><br>on <strong>${date}</strong> at <strong>${time}</strong> has been received.</p>
+      <div class="p-3 rounded-3" style="background:var(--soft);text-align:left;font-size:.84rem;color:var(--muted);max-width:320px;margin:0 auto 20px;">
+        <p style="margin:0;"><i class="fas fa-envelope me-2" style="color:var(--teal);"></i>Confirmation sent to: <strong>${email}</strong></p>
+        <p style="margin:8px 0 0;"><i class="fas fa-phone me-2" style="color:var(--teal);"></i>Our team will call you to confirm within 2 hours.</p>
+      </div>
+      <button class="btn-submit" style="width:auto;padding:10px 28px;" data-bs-dismiss="modal">Close</button>
+    </div>`;
+});
+
+/* =================================================================
+   JUHI  v5.0 — Pearl Dental Studio AI Receptionist
+   =================================================================
+   ONBOARDING:   LANG_SELECT → NAME_ASK → IDLE
+   CONVERSATION: IDLE / IN_TOPIC (follow-up Q&A per topic)
+   BOOKING FLOW: BOOKING_EMAIL → BOOKING_PHONE → BOOKING_REASON
+                 → BOOKING_DATE → BOOKING_TIME → BOOKING_CONFIRM
+   FAREWELL:     AWAITING_END → ENDED
+
+   RULES
+   ─────
+   • Ask language preference (Hindi / English) FIRST
+   • Ask user's name SECOND before anything else
+   • During booking flow, politely block topic switches
+     until all booking details are collected
+   • "Thank you" alone ≠ end — always ask if more help needed
+   • End ONLY when user confirms no more questions
+   • Farewell: "Thank you for calling Pearl Dental Studio Clinic! Have a nice day!"
+   ================================================================= */
+
+/* ─── STATES ─── */
+const S = {
+  LANG_SELECT    : 'lang_select',
+  NAME_ASK       : 'name_ask',
+  IDLE           : 'idle',
+  IN_TOPIC       : 'in_topic',
+  BOOKING_EMAIL  : 'booking_email',
+  BOOKING_PHONE  : 'booking_phone',
+  BOOKING_REASON : 'booking_reason',
+  BOOKING_DATE   : 'booking_date',
+  BOOKING_TIME   : 'booking_time',
+  BOOKING_CONFIRM: 'booking_confirm',
+  AWAITING_END   : 'awaiting_end',
+  ENDED          : 'ended'
+};
+
+/* ─── SESSION VARIABLES ─── */
+let juhiState     = S.LANG_SELECT;
+let activeTopic   = null;
+let userLang      = 'hi';        // 'hi' = Hindi/Hinglish  |  'en' = English
+let userName      = '';
+let juhiPanelOpen = false;
+let isListening   = false;
+let recognition   = null;
+let voices        = [];
+
+/* In-progress booking data */
+let bk = { name:'', email:'', phone:'', reason:'', date:'', dateDisplay:'', time:'' };
+
+/* ─── VOICE LOADING ─── */
+function loadVoices(){ voices = window.speechSynthesis.getVoices(); }
+if(window.speechSynthesis){ window.speechSynthesis.onvoiceschanged = loadVoices; loadVoices(); }
+
+/* ─── BILINGUAL HELPER ─── */
+// Returns hi text if lang is 'hi', en text if lang is 'en'
+function T(hi, en){ return userLang === 'en' ? en : hi; }
+// Personalise with user's name (adds "ji" suffix in Hindi)
+function greet(){ return userName ? T(userName + ' ji', userName) : T('aap', 'you'); }
+
+/* =================================================================
+   QUICK-REPLY BUTTONS — updated per state
+   ================================================================= */
+const QR = {
+  lang:[
+    { label:'🇮🇳 Hindi',   val:'hindi'   },
+    { label:'🇬🇧 English', val:'english'  },
+    { label:'🔀 Hinglish', val:'hinglish' }
+  ],
+  idle:[
+    { label:T('📅 Appointment', '📅 Appointment'), val:T('Appointment book karna hai','I want to book an appointment') },
+    { label:T('💰 Pricing', '💰 Pricing'),         val:T('Treatment ki fees kya hai','What are the treatment costs') },
+    { label:T('📍 Address', '📍 Address'),         val:T('Clinic ka address kya hai','What is the clinic address') },
+    { label:T('⏰ Timings', '⏰ Timings'),         val:T('Clinic ke timings kya hain','What are the clinic timings') }
+  ],
+  reason:[
+    {label:'🦷 Check-up',   val:'Routine Check-up'},
+    {label:'✨ Whitening',  val:'Teeth Whitening'},
+    {label:'🔲 Invisalign', val:'Invisalign'},
+    {label:'🔩 Implants',   val:'Dental Implants'},
+    {label:'⚙️ Braces',    val:'Braces'},
+    {label:'🔧 Root Canal', val:'Root Canal'},
+    {label:'🧹 Cleaning',   val:'Deep Cleaning'},
+    {label:'👶 Kids',       val:'Kids Dental'},
+    {label:'🚨 Emergency',  val:'Emergency'}
+  ],
+  timeSlots:[
+    {label:T('🌅 Subah 9–12',      'Morning 9–12'),    val:'morning'},
+    {label:T('☀️ Dopahar 12–4',    'Afternoon 12–4'),   val:'afternoon'},
+    {label:T('🌆 Shaam 4–8',       'Evening 4–8'),      val:'evening'}
+  ],
+  awaitingEnd:[
+    {label:T('✅ Haan, poochhna hai','✅ Yes, more questions'), val:T('haan aur sawaal hai','yes I have more questions')},
+    {label:T('👋 Nahi, shukriya',   '👋 No, goodbye'),         val:T('nahi shukriya goodbye','no thank you goodbye')}
+  ],
+  cancelBooking:[
+    {label:T('❌ Booking Cancel','❌ Cancel Booking'), val:'__CANCEL_BOOKING__'}
+  ]
+};
+
+function renderQR(btns){
+  const div = document.getElementById('quickReplies');
+  if(!div) return;
+  div.innerHTML = '';
+  (btns||[]).forEach(b=>{
+    const btn = document.createElement('button');
+    btn.className   = 'qr-btn';
+    btn.textContent = b.label;
+    btn.onclick     = ()=>{ if(b.val==='__CANCEL_BOOKING__') cancelBookingFlow(); else sendToJuhi(b.val); };
+    div.appendChild(btn);
+  });
+}
+
+function getIdleQR(){
+  return [
+    {label:'📅 '+T('Appointment','Appointment'), val:T('Appointment book karna hai','I want to book an appointment')},
+    {label:'💰 '+T('Fees','Pricing'),            val:T('Treatment ki fees kya hai','What are the treatment costs')},
+    {label:'📍 '+T('Address','Address'),          val:T('Clinic ka address kya hai','What is the clinic address')},
+    {label:'⏰ '+T('Timings','Timings'),           val:T('Clinic ke timings kya hain','What are the clinic timings')}
+  ];
+}
+
+/* =================================================================
+   KNOWLEDGE BASE — per-topic with follow-ups (bilingual)
+   ================================================================= */
+const TOPICS = {
+  checkup:{id:'checkup',
+    keys:['checkup','check up','check-up','scaling','polishing','cleaning','routine check','saaf'],
+    reply:()=>T(
+      "Bilkul! Routine Check-up aur Scaling ₹500–₹2,500 mein available hai. 🦷 Digital X-ray, gum assessment aur personalised dental report milti hai. Kya is baare mein aur jaanna chahte hain?",
+      "Sure! Routine check-up and scaling starts from ₹500–₹2,500. 🦷 Includes digital X-ray (if needed), gum assessment and a personalised dental report. Would you like to know more?"),
+    followUps:[
+      {keys:['x-ray','xray','how long','kitna time','duration','time'],
+       reply:()=>T("Check-up typically 30–45 minutes ka hota hai. Digital X-ray alag se ₹300–₹1,200 — 90% less radiation. Appointment book karein?","Typically 30–45 minutes. Digital X-ray is ₹300–₹1,200 if needed — 90% less radiation. Want to book?")},
+      {keys:['how often','kitni baar','frequency','regular','months'],
+       reply:()=>T("Har 6 mahine mein check-up recommended hai — issues early detect karne ke liye. Appointment lein?","A check-up every 6 months is recommended for early detection. Want to schedule?")}
+    ]
+  },
+  whitening:{id:'whitening',
+    keys:['whiten','whitening','safed','chamak','bright','laser whitening','zoom','white teeth'],
+    reply:()=>T(
+      "Zoom Laser Whitening se ek hi session mein 8 shades brighter smile! ✨ In-clinic ₹8K–₹15K, take-home kit ₹3,500–₹6,000. Results 2–3 saal. Aur detail chahiye?",
+      "Zoom Laser Whitening gives 8 shades brighter smile in one session! ✨ In-clinic: ₹8K–₹15K, take-home kit: ₹3,500–₹6,000. Results last 2–3 years. Want more details?"),
+    followUps:[
+      {keys:['safe','sensitivity','dard','pain','side effect'],
+       reply:()=>T("Bilkul safe hai! Thodi temporary sensitivity hoti hai — 24–48 hrs mein theek. Sensitivity gel bhi lagate hain. Book karein?","Completely safe! Some temporary sensitivity — resolves in 24–48 hrs. We also apply sensitivity gel. Want to book?")},
+      {keys:['how long','kitna time','duration','session'],
+       reply:()=>T("In-clinic 60–90 minutes — ek hi visit mein result! Take-home kit 2 weeks. Appointment lein?","In-clinic takes 60–90 minutes — results in one visit! Take-home kit over 2 weeks. Want to schedule?")}
+    ]
+  },
+  invisalign:{id:'invisalign',
+    keys:['invisalign','invisible','clear aligner','aligner','transparent','clear braces'],
+    reply:()=>T(
+      "Pearl Dental Bangalore mein certified Invisalign Gold Provider hai! 😊 Full treatment ₹80K–₹1.8L, Lite ₹45K–₹80K. Completely invisible, removable. Dr. Arjun Nair expert hain. Aur detail?",
+      "Pearl Dental is a certified Invisalign Gold Provider in Bangalore! 😊 Full treatment ₹80K–₹1.8L, Lite ₹45K–₹80K. Completely invisible and removable. Dr. Arjun Nair is our specialist. More details?"),
+    followUps:[
+      {keys:['how long','months','duration','time'],
+       reply:()=>T("Mild cases 3–6 mahine, complex 12–18 mahine. ClinCheck se pehle hi 3D result dekh sakte hain! Consultation book karein?","Mild cases 3–6 months, complex 12–18 months. ClinCheck lets you preview results in 3D first! Want to book a consultation?")},
+      {keys:['pain','dard','uncomfortable'],
+       reply:()=>T("Bahut comfortable hai! Naya aligner lagate waqt thoda pressure — sign ki teeth move ho rahe hain. Koi sharp wires nahi. Appointment lein?","Very comfortable! New aligners feel slightly snug — a sign teeth are moving. No sharp wires. Want to book?")}
+    ]
+  },
+  braces:{id:'braces',
+    keys:['brace','braces','bracket','taar','spring','ceramic','sapphire','orthodon','teeth straight','seedhe','teda'],
+    reply:()=>T(
+      "Teen types: Metal ₹20K–₹45K, Ceramic ₹40K–₹75K, Springs/Expanders ₹5K–₹12K extra. 🦷 Dr. Arjun Nair — 12 yrs orthodontics. Aur jaanna hai?",
+      "Three types: Metal ₹20K–₹45K, Ceramic ₹40K–₹75K, Springs/Expanders ₹5K–₹12K extra. 🦷 Dr. Arjun Nair — 12 yrs of orthodontics experience. Want more info?"),
+    followUps:[
+      {keys:['how long','months','duration'],
+       reply:()=>T("Typically 18–24 mahine. Har 4–6 hafte adjustment. Treatment ke baad retainer. Appointment lein?","Typically 18–24 months. Adjustment every 4–6 weeks. Retainer provided after treatment. Want to book?")},
+      {keys:['pain','dard','adjustment'],
+       reply:()=>T("Pehle 2–3 din thoda discomfort — soft food lo. Over time normal ho jaata hai. Book karein?","First 2–3 days mild discomfort — eat soft foods. Becomes completely normal over time. Want to book?")}
+    ]
+  },
+  implants:{id:'implants',
+    keys:['implant','tooth replacement','missing tooth','nakli daant','daant lagwana','gap in teeth'],
+    reply:()=>T(
+      "Permanent solution! Single implant ₹25K–₹50K/tooth, All-on-4 ₹2.5L+, implant dentures ₹1.2L+. 🦷 Dr. Rohit Verma hamare specialist hain. Detail chahiye?",
+      "Permanent solution! Single implant ₹25K–₹50K/tooth, All-on-4 from ₹2.5L, implant dentures from ₹1.2L. 🦷 Dr. Rohit Verma is our specialist. Want more details?"),
+    followUps:[
+      {keys:['how long','process','time'],
+       reply:()=>T("3–6 months typically. All-on-4 mein same-day teeth milte hain! Consultation lein?","Typically 3–6 months. All-on-4 gives same-day teeth! Want to book a consultation?")},
+      {keys:['pain','safe','surgery'],
+       reply:()=>T("Local anaesthesia mein zero dard. 3D CBCT guided surgery — safest technique. Appointment lein?","Local anaesthesia — zero pain during procedure. 3D CBCT guided surgery — safest technique. Want to book?")}
+    ]
+  },
+  wisdom:{id:'wisdom',
+    keys:['wisdom','akal daant','third molar','nikaalna','extract','back tooth'],
+    reply:()=>T(
+      "Simple extraction ₹3K–₹8K, surgical ₹8K–₹18K per tooth. Same-day emergency slots! Bilkul painless. Aur jaanna hai?",
+      "Simple extraction ₹3K–₹8K, surgical ₹8K–₹18K per tooth. Same-day emergency slots available! Completely pain-free. Want more info?"),
+    followUps:[
+      {keys:['pain','recovery','rest','baad mein'],
+       reply:()=>T("Zero dard anaesthesia se. 2–4 din rest, soft food. Swelling 3–5 din mein. Slot book karein?","Zero pain with anaesthesia. 2–4 days rest, eat soft food. Swelling resolves in 3–5 days. Want to book?")}
+    ]
+  },
+  rootcanal:{id:'rootcanal',
+    keys:['root canal','rct','nerve','toothache','severe pain','infection','dard bahut','daant mein dard'],
+    reply:()=>T(
+      "Dard ho raha hai? Fikr mat! Painless rotary RCT ₹5K–₹12K/tooth. Single sitting option bhi! Dr. Priya Sharma — 18 yrs. Aur jaanna hai?",
+      "In pain? Don't worry! Painless rotary RCT ₹5K–₹12K/tooth. Single sitting option available! Dr. Priya Sharma — 18 yrs experience. Want more details?"),
+    followUps:[
+      {keys:['pain','hurt','anaesthesia','dard nahi hoga'],
+       reply:()=>T("Strong anaesthesia — treatment mein zero dard. Baad mein 1–2 din mild soreness. Appointment lein?","Strong anaesthesia — zero pain during treatment. 1–2 days mild soreness after. Want to book?")},
+      {keys:['crown','cap','after','phir kya'],
+       reply:()=>T("RCT ke baad ceramic/zirconia crown zaroori — ₹6K–₹18K. Package deal available. Book karein?","A ceramic/zirconia crown is needed after RCT — ₹6K–₹18K. Package deals available. Want to book?")}
+    ]
+  },
+  deepcleaning:{id:'deepcleaning',
+    keys:['deep clean','deep cleaning','gum','gingivitis','periodon','tartar','plaque','khoon','bleeding gum'],
+    reply:()=>T(
+      "Deep Cleaning (Scaling & Root Planing) ₹2K–₹5K. Gum disease treat karta hai. Kya aur jaanna chahte hain?",
+      "Deep Cleaning (Scaling & Root Planing) ₹2K–₹5K. Treats gum disease and prevents future issues. Want to know more?"),
+    followUps:[
+      {keys:['pain','sensitivity','hurt'],
+       reply:()=>T("Anaesthesia ya numbing gel se discomfort kam. 1–2 din mild sensitivity normal hai. Book karein?","Performed with anaesthesia/numbing gel — minimal discomfort. 1–2 days mild sensitivity is normal. Want to book?")},
+      {keys:['how many','sessions','sittings'],
+       reply:()=>T("Mild cases ek session 60–90 min. Moderate-severe mein 2–4 sessions. Appointment lein?","Mild cases: one session 60–90 min. Moderate-severe: 2–4 sessions. Want to schedule?")}
+    ]
+  },
+  kids:{id:'kids',
+    keys:['kids','child','children','baby','bachha','bachhe','paediatric','pediatric','bacha','bachi','bachon','small children','mere bache'],
+    reply:()=>T(
+      "Dedicated Kids Zone hai! 🌈 Under-5 pehla check-up FREE! Dr. Meena Iyer — paediatric specialist. Check-up ₹400 se. Aur jaanna hai?",
+      "We have a dedicated Kids Zone! 🌈 First check-up FREE for under-5! Dr. Meena Iyer — paediatric specialist. Check-up from ₹400. Want to know more?"),
+    followUps:[
+      {keys:['scared','fear','cry','darr','phobia'],
+       reply:()=>T("Hum scared children ke liye trained hain! Tell-Show-Do technique, stickers, prizes. Bilkul comfortable experience. Appointment lein?","We're specially trained for anxious children! Tell-Show-Do technique, stickers and prizes. Completely stress-free. Want to book?")},
+      {keys:['age','first visit','kab'],
+       reply:()=>T("Pehla visit: jab pehla daant aaye ya 1 saal ki umar mein. Under-5 free! Book karein?","First visit: when first tooth appears or by age 1. Free for under-5! Want to book?")}
+    ]
+  },
+  pricing:{id:'pricing',
+    keys:['price','cost','fees','charges','kitna','kitne','rate','amount','paisa','rupee','rs.','inr','budget'],
+    reply:()=>T(
+      "Pearl Dental transparent pricing:\n• Check-up: ₹500–₹2,500\n• Whitening: ₹8K–₹15K\n• Invisalign: ₹45K–₹1.8L\n• Implants: ₹25K–₹50K/tooth\n• Braces: ₹20K–₹75K\n• Root Canal: ₹5K–₹12K\n• Deep Cleaning: ₹2K–₹5K\n• Kids: ₹400 se\nEMI bhi available! Kisi specific treatment ki fees chahiye?",
+      "Pearl Dental transparent pricing:\n• Check-up: ₹500–₹2,500\n• Whitening: ₹8K–₹15K\n• Invisalign: ₹45K–₹1.8L\n• Implants: ₹25K–₹50K/tooth\n• Braces: ₹20K–₹75K\n• Root Canal: ₹5K–₹12K\n• Deep Cleaning: ₹2K–₹5K\n• Kids: from ₹400\nEMI available! Want details on a specific treatment?"),
+    followUps:[
+      {keys:['emi','installment','monthly','kist'],
+       reply:()=>T("0% EMI 3–6 months HDFC, ICICI, Axis, Kotak cards pe! Bajaj Finserv loan bhi. Koi bhi treatment affordable! Book karein?","0% EMI for 3–6 months on HDFC, ICICI, Axis, Kotak cards! Bajaj Finserv loans also available. Any treatment becomes affordable! Want to book?")}
+    ]
+  },
+  doctors:{id:'doctors',
+    keys:['doctor','dr ','dentist','specialist','team','staff','surgeon','orthodontist'],
+    reply:()=>T(
+      "Hamare doctors:\n👩‍⚕️ Dr. Priya Sharma — Chief Surgeon (18 yrs)\n🦷 Dr. Arjun Nair — Orthodontist & Invisalign Gold (12 yrs)\n👧 Dr. Meena Iyer — Paediatric (10 yrs)\n🔬 Dr. Rohit Verma — Oral Surgeon & Implants (14 yrs)\nKisi specific doctor ke baare mein jaanna hai?",
+      "Our doctors:\n👩‍⚕️ Dr. Priya Sharma — Chief Surgeon (18 yrs)\n🦷 Dr. Arjun Nair — Orthodontist & Invisalign Gold (12 yrs)\n👧 Dr. Meena Iyer — Paediatric (10 yrs)\n🔬 Dr. Rohit Verma — Oral Surgeon & Implants (14 yrs)\nWant to know about a specific doctor?"),
+    followUps:[]
+  },
+  timings:{id:'timings',
+    keys:['timing','timings','hour','kab','khula','band','open','close','sunday','saturday','weekend','schedule','availability'],
+    reply:()=>T(
+      "Clinic timings:\n📅 Mon–Sat: 9:00 AM – 8:00 PM\n📅 Sunday: 10:00 AM – 4:00 PM\n🚨 Emergency: 24/7!\nHum 7 days open hain. Kya slot book karein?",
+      "Clinic hours:\n📅 Mon–Sat: 9:00 AM – 8:00 PM\n📅 Sunday: 10:00 AM – 4:00 PM\n🚨 Emergency: 24/7!\nOpen 7 days. Want to book a slot?"),
+    followUps:[
+      {keys:['sunday','weekend'],
+       reply:()=>T("Haan Sunday open hai — 10 AM–4 PM! WhatsApp +91 98456-78901. Book karein?","Yes, open Sunday 10 AM–4 PM! WhatsApp +91 98456-78901. Want to book?")},
+      {keys:['evening','late','6pm','7pm','8pm','shaam','after office'],
+       reply:()=>T("Evening slots 6 PM, 7 PM weekdays — office-goers ke liye perfect! Advance book karein?","Evening slots at 6 PM and 7 PM on weekdays — perfect for office-goers! Want to book in advance?")}
+    ]
+  },
+  location:{id:'location',
+    keys:['address','location','kahan','where','koramangala','map','direction','reach','kaise pahunche'],
+    reply:()=>T(
+      "Address:\n📍 42, 5th Block, Koramangala\nNear Forum Mall, Bangalore – 560095\n🚇 Metro: Silk Board (10 min)\n🚗 Free parking!\nGoogle Maps pe 'Pearl Dental Studio Koramangala' search karein. Aur help?",
+      "Address:\n📍 42, 5th Block, Koramangala\nNear Forum Mall, Bangalore – 560095\n🚇 Metro: Silk Board (10 min)\n🚗 Free parking!\nSearch 'Pearl Dental Studio Koramangala' on Google Maps. Need more help?"),
+    followUps:[]
+  },
+  contact:{id:'contact',
+    keys:['phone number','contact','call karein','whatsapp number','email address','website'],
+    reply:()=>T(
+      "Contact:\n📞 +91 80-4123-4567\n💬 WhatsApp: +91 98456-78901\n✉️ hello@pearldentalstudio.in\nKya appointment book karni hai?",
+      "Contact us:\n📞 +91 80-4123-4567\n💬 WhatsApp: +91 98456-78901\n✉️ hello@pearldentalstudio.in\nWould you like to book an appointment?"),
+    followUps:[]
+  },
+  insurance:{id:'insurance',
+    keys:['insurance','emi','loan','installment','cashless','payment','upi','card','pay kaise'],
+    reply:()=>T(
+      "Payment options:\n💳 Cash, Card, UPI, Net Banking\n📋 0% EMI (3–6 months) select cards\n🏦 Bajaj Finserv healthcare loan\n🧾 Insurance assistance\nKoi specific query?",
+      "Payment options:\n💳 Cash, Card, UPI, Net Banking\n📋 0% EMI (3–6 months) on select cards\n🏦 Bajaj Finserv healthcare loans\n🧾 Insurance reimbursement help\nAny specific query?"),
+    followUps:[]
+  },
+  emergency:{id:'emergency',
+    keys:['emergency','urgent','severe pain','bahut dard','accident','broken tooth','chipped','knocked','heavy bleeding','swelling'],
+    reply:()=>T(
+      "Emergency! 🚨 Turant call karein: +91 80-4123-4567! Same-day slots available. Main abhi booking open karti hoon.",
+      "Emergency! 🚨 Please call immediately: +91 80-4123-4567! Same-day slots available. Let me open booking for you now."),
+    action:'startBooking',
+    followUps:[]
+  }
+};
+
+/* ─── INTENT SIGNALS ─── */
+const FAREWELL_SIGNALS  = ['bye','goodbye','alvida','take care','band kar','khatam karo','end call','bas ab','chalta hoon','chalti hoon','thank you bye','thanks bye'];
+const THANKS_ONLY       = ['thank you','thanks','shukriya','dhanyawad','bahut achha','perfect','great','helpful','acha laga'];
+const CONFIRM_NO_MORE   = ['no ','nahi','na ','nope','nothing','kuch nahi','koi nahi','thats all',"that's all",'sab ho gaya','done','no more','no questions','nahi chahiye'];
+const CONFIRM_YES_MORE  = ['yes','haan','ha ','ji ','sure','please','aur','more','ek aur'];
+const BOOKING_SIGNALS   = ['book','appoint','appointment','schedule','visit','booking karna','slot lena','date lena','consult','milna hai'];
+
+function isFarewell(t) { return FAREWELL_SIGNALS.some(k=>t.includes(k)); }
+function isThanksOnly(t){ return THANKS_ONLY.some(k=>t.includes(k)) && !isFarewell(t); }
+function isConfirmNo(t) { return CONFIRM_NO_MORE.some(k=>t.includes(k)); }
+function isConfirmYes(t){ return CONFIRM_YES_MORE.some(k=>t.includes(k)); }
+function isBookingIntent(t){ return BOOKING_SIGNALS.some(k=>t.includes(k)); }
+
+function detectTopic(t){
+  for(const tp of Object.values(TOPICS)){
+    if(tp.keys.some(k=>t.includes(k))) return tp;
+  }
+  return null;
+}
+function detectFollowUp(t, topicId){
+  const tp = TOPICS[topicId];
+  if(!tp||!tp.followUps) return null;
+  for(const fu of tp.followUps){ if(fu.keys.some(k=>t.includes(k))) return fu; }
+  return null;
+}
+
+/* ─── DATE PARSING ─── */
+function parseDate(t){
+  const today = new Date();
+  if(/(kal|tomorrow)/i.test(t)){
+    today.setDate(today.getDate()+1);
+    return { iso:today.toISOString().split('T')[0], display:formatDateDisplay(today) };
+  }
+  if(/(parso|day after)/i.test(t)){
+    today.setDate(today.getDate()+2);
+    return { iso:today.toISOString().split('T')[0], display:formatDateDisplay(today) };
+  }
+  const months = {jan:0,feb:1,mar:2,apr:3,may:4,jun:5,jul:6,aug:7,sep:8,oct:9,nov:10,dec:11,
+    january:0,february:1,march:2,april:3,june:5,july:6,august:7,september:8,october:9,november:10,december:11,
+    jan:0,feb:1,march:2,april:3,may:4,june:5,july:6,aug:7,sep:8,oct:9,nov:10,dec:11};
+  const numMatch = t.match(/(\d{1,2})[\/\-\s](\d{1,2})(?:[\/\-\s](\d{2,4}))?/);
+  if(numMatch){
+    const d=parseInt(numMatch[1]), mo=parseInt(numMatch[2])-1, yr=numMatch[3]?parseInt(numMatch[3]):today.getFullYear();
+    const dt = new Date(yr<100?2000+yr:yr, mo, d);
+    return { iso:dt.toISOString().split('T')[0], display:formatDateDisplay(dt) };
+  }
+  for(const [name,idx] of Object.entries(months)){
+    const re = new RegExp('(\\d{1,2})\\s*'+name,'i');
+    const m2 = t.match(re) || t.match(new RegExp(name+'\\s*(\\d{1,2})','i'));
+    if(m2){
+      const day=parseInt(m2[1]);
+      const yr=today.getFullYear() + (idx < today.getMonth() ? 1 : 0);
+      const dt=new Date(yr,idx,day);
+      return { iso:dt.toISOString().split('T')[0], display:formatDateDisplay(dt) };
+    }
+  }
+  return null;
+}
+function formatDateDisplay(d){
+  return d.toLocaleDateString('en-IN',{weekday:'short',day:'numeric',month:'short',year:'numeric'});
+}
+
+/* ─── TIME SLOT PARSING ─── */
+function parseTimeSlot(t){
+  if(/(morning|subah|9|10|11)/i.test(t))   return '09:00 AM – 12:00 PM';
+  if(/(afternoon|dopahar|12|1|2|3)/i.test(t)) return '12:00 PM – 04:00 PM';
+  if(/(evening|shaam|4|5|6|7|8)/i.test(t)) return '04:00 PM – 08:00 PM';
+  return null;
+}
+function timeSlotLabel(slot){
+  if(!slot) return '';
+  if(slot.includes('09')) return T('Subah (9 AM–12 PM)','Morning (9 AM–12 PM)');
+  if(slot.includes('12')) return T('Dopahar (12–4 PM)','Afternoon (12–4 PM)');
+  return T('Shaam (4–8 PM)','Evening (4–8 PM)');
+}
+
+/* =================================================================
+   PANEL OPEN / CLOSE / RESET
+   ================================================================= */
+function toggleJuhi(){ juhiPanelOpen ? closeJuhiPanel() : openJuhiPanel(); }
+
+function openJuhiPanel(){
+  juhiPanelOpen = true;
+  resetJuhiSession();
+  document.getElementById('juhiPanel').classList.add('open');
+  setTimeout(startOnboarding, 320);
+}
+
+function closeJuhiPanel(){
+  juhiPanelOpen = false;
+  document.getElementById('juhiPanel').classList.remove('open');
+  stopListening();
+  window.speechSynthesis && window.speechSynthesis.cancel();
+}
+
+function resetJuhiSession(){
+  document.getElementById('juhiChat').innerHTML              = '';
+  document.getElementById('juhiBookingForm').style.display   = 'none';
+  document.getElementById('juhiInput').value                 = '';
+  document.getElementById('juhiInput').disabled              = false;
+  document.getElementById('juhiInput').placeholder           = T('Yahan type karein...','Type here...');
+  document.getElementById('juhiMicBtn').disabled             = false;
+  document.getElementById('juhiStatus').textContent          = 'Online & Ready to Help';
+  const eb=document.getElementById('juhiEndBtn');
+  if(eb){ eb.disabled=false; eb.style.opacity='1'; }
+  juhiState   = S.LANG_SELECT;
+  activeTopic = null;
+  userLang    = 'hi';
+  userName    = '';
+  bk          = { name:'', email:'', phone:'', reason:'', date:'', dateDisplay:'', time:'' };
+  stopListening();
+  renderQR([]);
+}
+
+/* =================================================================
+   ONBOARDING — language → name → welcome
+   ================================================================= */
+function startOnboarding(){
+  juhiState = S.LANG_SELECT;
+  const msg = "Namaste! 🙏 Main Juhi hoon — Pearl Dental Studio, Bangalore ki AI Receptionist.\n\nKya aap Hindi mein baat karna chahenge ya English mein? / Would you like to speak in Hindi or English?";
+  addJuhiMsg(msg, 'juhi');
+  speakJuhi("Namaste! Main Juhi hoon. Please select your preferred language — Hindi, English, or Hinglish.");
+  renderQR(QR.lang);
+}
+
+function handleLangSelect(raw){
+  const t = raw.toLowerCase();
+  if(t.includes('english') || t.includes('en ')){ userLang='en'; }
+  else if(t.includes('hindi') || t.includes('hi ')){ userLang='hi'; }
+  else { userLang='hi'; } // hinglish / default
+  const langLabel = userLang==='en' ? 'English' : (raw.toLowerCase().includes('hinglish') ? 'Hinglish' : 'Hindi');
+  juhiState = S.NAME_ASK;
+  const msg = T(
+    `Bahut achha! ${langLabel} mein baat karte hain. 😊\n\nAapka naam kya hai? (Aapka naam jaanke main aapko personally greet kar sakti hoon!)`,
+    `Great! We'll chat in ${langLabel}. 😊\n\nMay I know your name? (It helps me greet you personally!)`
+  );
+  delayedReply(msg, 500);
+  renderQR([]);
+}
+
+function handleNameInput(raw){
+  // Extract name — take first 2 words, capitalise
+  userName = raw.trim().split(/\s+/).slice(0,2).map(w=>w.charAt(0).toUpperCase()+w.slice(1).toLowerCase()).join(' ');
+  bk.name  = userName;
+  juhiState = S.IDLE;
+  const welcome = T(
+    `Shukriya, ${greet()}! 🙏 Pearl Dental Studio mein aapka swagat hai!\n\nMain ${userName} ji ke liye kaise help kar sakti hoon? Treatments, pricing, appointment booking — kuch bhi poochhiye!`,
+    `Thank you, ${greet()}! 🙏 Welcome to Pearl Dental Studio!\n\nHow can I help you today, ${userName}? Ask me about treatments, pricing, appointments — anything!`
+  );
+  delayedReply(welcome, 600);
+  setTimeout(()=>renderQR(getIdleQR()), 900);
+}
+
+/* =================================================================
+   MAIN MESSAGE DISPATCHER
+   ================================================================= */
+function sendToJuhi(userText){
+  const input = document.getElementById('juhiInput');
+  const raw   = (typeof userText==='string' ? userText : input.value).trim();
+  if(!raw || juhiState===S.ENDED) return;
+  input.value = '';
+  const t = raw.toLowerCase();
+  addJuhiMsg(raw, 'user');
+
+  /* --- ONBOARDING STATES --- */
+  if(juhiState===S.LANG_SELECT){ handleLangSelect(raw); return; }
+  if(juhiState===S.NAME_ASK)   { handleNameInput(raw);  return; }
+
+  /* --- AWAITING END CONFIRMATION --- */
+  if(juhiState===S.AWAITING_END){
+    if(isConfirmNo(t)){ doEndCall(); return; }
+    juhiState = S.IDLE; activeTopic = null;
+    const c = T(`Bilkul, ${greet()}! 😊 Batao — aur kya jaanna chahte hain?`, `Of course, ${greet()}! 😊 Go ahead — what else would you like to know?`);
+    delayedReply(c); renderQR(getIdleQR()); return;
+  }
+
+  /* --- BOOKING FLOW STATES (topic-guarded) --- */
+  if([S.BOOKING_EMAIL,S.BOOKING_PHONE,S.BOOKING_REASON,S.BOOKING_DATE,S.BOOKING_TIME,S.BOOKING_CONFIRM].includes(juhiState)){
+    handleBookingStep(raw, t); return;
+  }
+
+  /* --- SHOW TYPING --- */
+  showTyping(true);
+  const delay = 700 + Math.random()*500;
+
+  setTimeout(()=>{
+    showTyping(false);
+
+    /* Farewell */
+    if(isFarewell(t)){ juhiState=S.AWAITING_END; askFurtherHelp(); return; }
+
+    /* Thank you alone */
+    if(isThanksOnly(t)){
+      juhiState=S.AWAITING_END;
+      const thanks = T(
+        `Aapka bahut shukriya, ${greet()}! 🙏 Ye jaankar achha laga ki main help kar payi. Kya koi aur sawaal hai?`,
+        `Thank you so much, ${greet()}! 🙏 Glad I could help. Is there anything else you'd like to know?`
+      );
+      addJuhiMsg(thanks,'juhi'); speakJuhi(thanks);
+      renderQR(QR.awaitingEnd); return;
+    }
+
+    /* Booking intent */
+    if(isBookingIntent(t)){ startBookingFlow(); return; }
+
+    /* Follow-up within active topic */
+    if(juhiState===S.IN_TOPIC && activeTopic){
+      const fu = detectFollowUp(t, activeTopic);
+      if(fu){ addJuhiMsg(fu.reply(),'juhi'); speakJuhi(fu.reply()); return; }
+      /* New topic while in old topic */
+      const newTp = detectTopic(t);
+      if(newTp && newTp.id !== activeTopic){
+        const closer = T(`Samajh gayi! Pehle ${getTopicLabel(activeTopic)} ke baare mein ek note — aur details ke liye kabhi bhi poochhiye. Ab ${getTopicLabel(newTp.id)} ke baare mein batati hoon!`,
+          `Got it! Just a note — feel free to ask more about ${getTopicLabel(activeTopic)} anytime. Now let me tell you about ${getTopicLabel(newTp.id)}!`);
+        addJuhiMsg(closer,'juhi'); speakJuhi(closer);
+        setTimeout(()=>{
+          activeTopic=newTp.id; juhiState=S.IN_TOPIC;
+          const r=newTp.reply(); addJuhiMsg(r,'juhi'); speakJuhi(r);
+          if(newTp.action==='startBooking') startBookingFlow();
+        }, 1100); return;
+      }
+    }
+
+    /* Fresh topic */
+    const tp = detectTopic(t);
+    if(tp){
+      activeTopic=tp.id; juhiState=S.IN_TOPIC;
+      const r=tp.reply(); addJuhiMsg(r,'juhi'); speakJuhi(r);
+      if(tp.action==='startBooking') startBookingFlow();
+      renderQR(getIdleQR()); return;
+    }
+
+    /* Fallback */
+    const fb = T(
+      `Hmm, samajh nahi aaya — lekin main poori koshish karoongi! Aap poochh sakte hain:\n• Treatments & pricing\n• Appointment booking\n• Doctors ki info\n• Clinic timings & address`,
+      `Hmm, I didn't quite catch that — but I'll try my best! You can ask me about:\n• Treatments & pricing\n• Appointment booking\n• Doctor info\n• Clinic hours & address`
+    );
+    addJuhiMsg(fb,'juhi'); speakJuhi(fb); renderQR(getIdleQR());
+  }, delay);
+}
+
+function getTopicLabel(id){
+  const labels={checkup:'check-up',whitening:'whitening',invisalign:'Invisalign',braces:'braces',
+    implants:'implants',wisdom:'wisdom tooth',rootcanal:'root canal',deepcleaning:'deep cleaning',
+    kids:'kids dentistry',pricing:'pricing',doctors:'our doctors',timings:'timings',location:'location'};
+  return labels[id]||id;
+}
+
+/* =================================================================
+   BOOKING FLOW — conversational, step by step
+   ================================================================= */
+function startBookingFlow(){
+  juhiState = S.BOOKING_EMAIL;
+  bk = { name:userName, email:'', phone:'', reason:'', date:'', dateDisplay:'', time:'' };
+  const ask = T(
+    `Bilkul, ${greet()}! Chalo appointment book karte hain. 📅\n\nStep 1/5 — Aapka email address kya hai? (Confirmation is pe aayega)`,
+    `Of course, ${greet()}! Let's book your appointment. 📅\n\nStep 1/5 — What is your email address? (Confirmation will be sent here)`
+  );
+  addJuhiMsg(ask,'juhi'); speakJuhi(ask);
+  renderQR([{label:T('❌ Booking Cancel','❌ Cancel Booking'), val:'__CANCEL_BOOKING__'}]);
+  document.getElementById('juhiInput').placeholder = T('Email address daalen...','Enter email address...');
+}
+
+function handleBookingStep(raw, t){
+  /* Allow cancel at any step */
+  if(t.includes('cancel') || t.includes('__cancel_booking__') || t.includes('chhodo') || t.includes('rehne do')){
+    cancelBookingFlow(); return;
+  }
+
+  switch(juhiState){
+
+    /* ── Step 1: Email ── */
+    case S.BOOKING_EMAIL:{
+      const emailRx = /[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}/;
+      const match = raw.match(emailRx);
+      if(!match){
+        const err = T("Ye valid email nahi laga. Dobara try karein — jaise: name@email.com","That doesn't look like a valid email. Please try again — e.g. name@email.com");
+        addJuhiMsg(err,'juhi'); speakJuhi(err); return;
+      }
+      bk.email = match[0];
+      juhiState = S.BOOKING_PHONE;
+      const next = T(
+        `✅ Email note kar liya: ${bk.email}\n\nStep 2/5 — Aapka phone number? (Optional hai — 'skip' bol sakte hain)`,
+        `✅ Email noted: ${bk.email}\n\nStep 2/5 — Your phone number? (Optional — say 'skip' to continue)`
+      );
+      delayedReply(next, 500);
+      document.getElementById('juhiInput').placeholder = T('Phone number ya skip...','Phone number or skip...');
+      break;
+    }
+
+    /* ── Step 2: Phone ── */
+    case S.BOOKING_PHONE:{
+      const phoneRx = /\d[\d\s\-]{8,}/;
+      if(t.includes('skip') || t.includes('no ') || t.includes('nahi')){
+        bk.phone = '';
+      } else {
+        const pm = raw.match(phoneRx);
+        bk.phone = pm ? pm[0].replace(/\D/g,'') : '';
+      }
+      juhiState = S.BOOKING_REASON;
+      const next = T(
+        `✅ Step 3/5 — Aap kisliye aana chahte hain? Neeche se choose karein ya type karein:`,
+        `✅ Step 3/5 — What would you like to come in for? Choose below or type:`
+      );
+      delayedReply(next, 500);
+      renderQR(QR.reason);
+      document.getElementById('juhiInput').placeholder = T('Treatment batayein...','Enter treatment reason...');
+      break;
+    }
+
+    /* ── Step 3: Reason ── */
+    case S.BOOKING_REASON:{
+      bk.reason = raw.trim();
+      juhiState = S.BOOKING_DATE;
+      const next = T(
+        `✅ ${bk.reason} — noted! Step 4/5 — Aapko kaunsi date prefer hai?\nJaise: "15 June", "kal", "parso", ya "15/6/2025"`,
+        `✅ ${bk.reason} — noted! Step 4/5 — Which date do you prefer?\nE.g. "15 June", "tomorrow", "15/6/2025"`
+      );
+      delayedReply(next, 500);
+      renderQR([{label:T('📅 Kal','📅 Tomorrow'), val:'kal'},{label:T('📅 Parso','📅 Day after'), val:'parso'},
+               {label:T('❌ Cancel','❌ Cancel'), val:'__CANCEL_BOOKING__'}]);
+      document.getElementById('juhiInput').placeholder = T('Date batayein...','Enter preferred date...');
+      break;
+    }
+
+    /* ── Step 4: Date ── */
+    case S.BOOKING_DATE:{
+      const parsed = parseDate(t);
+      if(!parsed){
+        const err = T("Date samajh nahi aaya. 'DD Month' ya 'DD/MM/YYYY' format mein try karein — jaise '15 June'","Couldn't understand the date. Try 'DD Month' or 'DD/MM/YYYY' — e.g. '15 June'");
+        addJuhiMsg(err,'juhi'); speakJuhi(err); return;
+      }
+      const todayIso = new Date().toISOString().split('T')[0];
+      if(parsed.iso < todayIso){
+        const err = T("Ye date pehle ki hai — please aage ki date batayein.","That date is in the past — please provide a future date.");
+        addJuhiMsg(err,'juhi'); speakJuhi(err); return;
+      }
+      bk.date = parsed.iso; bk.dateDisplay = parsed.display;
+      juhiState = S.BOOKING_TIME;
+      const next = T(
+        `✅ Date: ${bk.dateDisplay}\n\nStep 5/5 — Kaunsa time prefer karein?`,
+        `✅ Date: ${bk.dateDisplay}\n\nStep 5/5 — Which time slot do you prefer?`
+      );
+      delayedReply(next, 500);
+      renderQR(QR.timeSlots.concat([{label:T('❌ Cancel','❌ Cancel'), val:'__CANCEL_BOOKING__'}]));
+      document.getElementById('juhiInput').placeholder = T('Time batayein...','Enter preferred time...');
+      break;
+    }
+
+    /* ── Step 5: Time ── */
+    case S.BOOKING_TIME:{
+      const slot = parseTimeSlot(t);
+      if(!slot){
+        const err = T("Time slot samajh nahi aaya. 'morning', 'afternoon', ya 'evening' bolein.","Couldn't understand the time. Say 'morning', 'afternoon', or 'evening'.");
+        addJuhiMsg(err,'juhi'); speakJuhi(err); return;
+      }
+      bk.time = slot;
+      juhiState = S.BOOKING_CONFIRM;
+      showBookingConfirmCard(); break;
+    }
+
+    /* ── Step 6: Confirm ── */
+    case S.BOOKING_CONFIRM:{
+      if(t.includes('confirm') || t.includes('haan') || t.includes('yes') || t.includes('sahi') || t.includes('bilkul') || t.includes('ok')){
+        finalConfirmBooking();
+      } else if(t.includes('change') || t.includes('badal') || t.includes('edit')){
+        const msg = T("Kya change karna hai? 'email', 'phone', 'reason', 'date', ya 'time' — bolein ya type karein.", "What would you like to change? Say 'email', 'phone', 'reason', 'date', or 'time'.");
+        addJuhiMsg(msg,'juhi'); speakJuhi(msg);
+        handleBookingEditRequest(t);
+      } else if(isConfirmNo(t)){
+        cancelBookingFlow();
+      }
+      break;
+    }
+  }
+}
+
+function showBookingConfirmCard(){
+  const summary = T(
+    `📋 Aapki appointment ka summary:\n\n👤 Naam: ${bk.name}\n📧 Email: ${bk.email}\n📱 Phone: ${bk.phone||'—'}\n🦷 Treatment: ${bk.reason}\n📅 Date: ${bk.dateDisplay}\n⏰ Time: ${timeSlotLabel(bk.time)}\n\nSab sahi hai? Confirm karein!`,
+    `📋 Your appointment summary:\n\n👤 Name: ${bk.name}\n📧 Email: ${bk.email}\n📱 Phone: ${bk.phone||'—'}\n🦷 Treatment: ${bk.reason}\n📅 Date: ${bk.dateDisplay}\n⏰ Time: ${timeSlotLabel(bk.time)}\n\nDoes everything look right? Please confirm!`
+  );
+  addJuhiMsg(summary,'juhi'); speakJuhi(T("Aapki appointment ka summary ready hai — kya sab sahi hai? Confirm karein!", "Your appointment summary is ready — does everything look correct? Please confirm!"));
+  // Pre-fill hidden form fields & show review card
+  document.getElementById('jbName').value   = bk.name;
+  document.getElementById('jbEmail').value  = bk.email;
+  document.getElementById('jbPhone').value  = bk.phone;
+  document.getElementById('jbReason').value = bk.reason;
+  document.getElementById('jbDate').value   = bk.date;
+  document.getElementById('jbTime').value   = bk.time;
+  document.getElementById('bookingSummaryCard').innerHTML =
+    `<b>👤</b> ${bk.name}<br><b>📧</b> ${bk.email}<br><b>📱</b> ${bk.phone||'—'}<br>`+
+    `<b>🦷</b> ${bk.reason}<br><b>📅</b> ${bk.dateDisplay}<br><b>⏰</b> ${timeSlotLabel(bk.time)}`;
+  document.getElementById('juhiBookingForm').style.display = 'block';
+  renderQR([
+    {label:T('✅ Confirm!','✅ Confirm!'), val:'confirm haan'},
+    {label:T('✏️ Change karein','✏️ Change'), val:'change karna hai'},
+    {label:T('❌ Cancel','❌ Cancel'), val:'__CANCEL_BOOKING__'}
+  ]);
+  document.getElementById('juhiInput').placeholder = T("'confirm' ya 'change' likhein...","Type 'confirm' or 'change'...");
+}
+
+function handleBookingEditRequest(t){
+  if(t.includes('email'))  { juhiState=S.BOOKING_EMAIL; document.getElementById('juhiBookingForm').style.display='none';
+    const m=T("Email dobara batayein:","Please re-enter your email:"); delayedReply(m,400); }
+  else if(t.includes('phone')) { juhiState=S.BOOKING_PHONE; document.getElementById('juhiBookingForm').style.display='none';
+    const m=T("Phone dobara batayein:","Please re-enter your phone:"); delayedReply(m,400); }
+  else if(t.includes('reason')||t.includes('treatment')) { juhiState=S.BOOKING_REASON; document.getElementById('juhiBookingForm').style.display='none';
+    const m=T("Treatment/reason dobara batayein:","Please re-enter the treatment/reason:"); delayedReply(m,400); renderQR(QR.reason); }
+  else if(t.includes('date')) { juhiState=S.BOOKING_DATE; document.getElementById('juhiBookingForm').style.display='none';
+    const m=T("Date dobara batayein:","Please re-enter the date:"); delayedReply(m,400); }
+  else if(t.includes('time')||t.includes('slot')) { juhiState=S.BOOKING_TIME; document.getElementById('juhiBookingForm').style.display='none';
+    const m=T("Time slot dobara batayein:","Please re-enter the time slot:"); delayedReply(m,400); renderQR(QR.timeSlots); }
+}
+
+function cancelBookingFlow(){
+  document.getElementById('juhiBookingForm').style.display = 'none';
+  juhiState   = S.IDLE;
+  activeTopic = null;
+  const msg = T(
+    `Theek hai, ${greet()} — booking cancel kar di. Koi bhi aur sawaal ho toh zaroor batayein! 😊`,
+    `No problem, ${greet()} — booking cancelled. Feel free to ask anything else! 😊`
+  );
+  addJuhiMsg(msg,'juhi'); speakJuhi(msg); renderQR(getIdleQR());
+  document.getElementById('juhiInput').placeholder = T('Yahan type karein...','Type here...');
+}
+
+function finalConfirmBooking(){
+  document.getElementById('juhiBookingForm').style.display = 'none';
+  // Also pre-fill the main website booking modal
+  document.getElementById('bkName').value   = bk.name;
+  document.getElementById('bkEmail').value  = bk.email;
+  document.getElementById('bkPhone').value  = bk.phone||'';
+  document.getElementById('bkReason').value = bk.reason;
+  document.getElementById('bkDate').value   = bk.date;
+  document.getElementById('bkTime').value   = bk.time;
+
+  const conf = T(
+    `✅ Appointment confirmed, ${greet()}! 🎉\n\n🦷 ${bk.reason}\n📅 ${bk.dateDisplay}\n⏰ ${timeSlotLabel(bk.time)}\n\nConfirmation ${bk.email} pe bhej diya gaya hai! Hamare team se 2 ghante mein call aayegi. Pearl Dental Studio mein aapka swagat hai! 🙏`,
+    `✅ Appointment confirmed, ${greet()}! 🎉\n\n🦷 ${bk.reason}\n📅 ${bk.dateDisplay}\n⏰ ${timeSlotLabel(bk.time)}\n\nConfirmation sent to ${bk.email}! Our team will call you within 2 hours. Looking forward to seeing you at Pearl Dental Studio! 🙏`
+  );
+  addJuhiMsg(conf,'juhi');
+  speakJuhi(T(
+    `Appointment confirm ho gayi ${greet()}! ${bk.reason} ke liye ${bk.dateDisplay} ko. Confirmation email pe bhej diya gaya hai. Pearl Dental Studio mein milenge!`,
+    `Appointment confirmed ${greet()}! For ${bk.reason} on ${bk.dateDisplay}. Confirmation sent to your email. Looking forward to seeing you at Pearl Dental Studio!`
+  ));
+  juhiState   = S.IN_TOPIC;
+  activeTopic = 'booking';
+  renderQR(getIdleQR());
+  document.getElementById('juhiInput').placeholder = T('Yahan type karein...','Type here...');
+  setTimeout(askFurtherHelp, 4000);
+}
+
+/* =================================================================
+   FURTHER HELP + END CALL
+   ================================================================= */
+function askFurtherHelp(){
+  juhiState = S.AWAITING_END;
+  const msg = T(
+    `${greet()}, kya koi aur sawaal hai ya koi aur help chahiye? 🤔 Agar sab ho gaya toh main call wrap kar deti hoon!`,
+    `${greet()}, is there anything else I can help you with? 🤔 If you're all set, I'll wrap up the call!`
+  );
+  addJuhiMsg(msg,'juhi'); speakJuhi(msg);
+  renderQR(QR.awaitingEnd);
+}
+
+function endJuhiCall(){
+  if(juhiState===S.ENDED) return;
+  if([S.BOOKING_EMAIL,S.BOOKING_PHONE,S.BOOKING_REASON,S.BOOKING_DATE,S.BOOKING_TIME,S.BOOKING_CONFIRM].includes(juhiState)){
+    const warn = T(
+      `${greet()}, aapki booking abhi incomplete hai. Pehle booking complete karein, phir call end hogi. Ya cancel karein?`,
+      `${greet()}, your booking is still in progress. Please complete it first, or cancel the booking. Want to cancel?`
+    );
+    addJuhiMsg(warn,'juhi'); speakJuhi(warn);
+    renderQR([
+      {label:T('✅ Booking Complete Karein','✅ Complete Booking'), val:T('haan booking complete karte hain','yes let me complete the booking')},
+      {label:T('❌ Cancel Booking','❌ Cancel Booking'), val:'__CANCEL_BOOKING__'}
+    ]); return;
+  }
+  if(juhiState===S.AWAITING_END){ doEndCall(); return; }
+  askFurtherHelp();
+}
+
+function doEndCall(){
+  juhiState = S.ENDED;
+  stopListening();
+  window.speechSynthesis && window.speechSynthesis.cancel();
+  document.getElementById('juhiBookingForm').style.display = 'none';
+  const bye = T(
+    `Bahut shukriya Pearl Dental Studio Clinic ko call karne ke liye, ${greet()}! 🙏 Aapki smile hamaari sabse badi priority hai. Jald milenge — Have a wonderful day! Take care! 🦷😊`,
+    `Thank you for calling Pearl Dental Studio Clinic, ${greet()}! 🙏 Your smile is our top priority. Have a wonderful day! Take care! 🦷😊`
+  );
+  addJuhiMsg(bye,'juhi'); speakJuhi(bye);
+  document.getElementById('juhiStatus').textContent = T('Call Ended','Call Ended');
+  const eb=document.getElementById('juhiEndBtn');
+  if(eb){ eb.disabled=true; eb.style.opacity='0.4'; }
+  document.getElementById('juhiInput').disabled    = true;
+  document.getElementById('juhiInput').placeholder = T('Call end ho gayi.','Call ended.');
+  document.getElementById('juhiMicBtn').disabled   = true;
+  renderQR([]);
+  setTimeout(closeJuhiPanel, 5500);
+}
+
+/* =================================================================
+   HELPERS
+   ================================================================= */
+function delayedReply(msg, delay=600){
+  setTimeout(()=>{ addJuhiMsg(msg,'juhi'); speakJuhi(msg); }, delay);
+}
+function showTyping(show){
+  document.getElementById('juhiTyping').style.display = show ? 'block' : 'none';
+  const chat=document.getElementById('juhiChat'); chat.scrollTop=chat.scrollHeight;
+}
+function addJuhiMsg(text, sender){
+  const chat=document.getElementById('juhiChat');
+  const msg=document.createElement('div');
+  msg.className='msg '+sender; msg.style.whiteSpace='pre-line'; msg.textContent=text;
+  chat.appendChild(msg); chat.scrollTop=chat.scrollHeight;
+}
+function speakJuhi(text){
+  if(!window.speechSynthesis) return;
+  window.speechSynthesis.cancel();
+  const clean=text.replace(/[^\x00-\x7F\u0900-\u097F ]/g,'').trim();
+  const utter=new SpeechSynthesisUtterance(clean);
+  utter.rate=0.93; utter.pitch=1.07; utter.volume=1;
+  if(!voices.length) voices=window.speechSynthesis.getVoices();
+  const langPref = userLang==='en' ? 'en' : 'hi';
+  const pick=
+    voices.find(v=>v.lang.startsWith(langPref==='hi'?'hi':'en') && /female|woman|girl/i.test(v.name))||
+    voices.find(v=>v.lang.startsWith(langPref==='hi'?'hi':'en'))||
+    voices.find(v=>v.lang==='en-IN' && /female/i.test(v.name))||
+    voices.find(v=>v.lang==='en-IN')||
+    voices.find(v=>/female/i.test(v.name))||
+    voices[0];
+  if(pick) utter.voice=pick;
+  utter.lang=pick?pick.lang:(userLang==='en'?'en-IN':'hi-IN');
+  window.speechSynthesis.speak(utter);
+}
+
+/* =================================================================
+   MICROPHONE
+   ================================================================= */
+function toggleMic(){ isListening ? stopListening() : requestMicAndListen(); }
+function requestMicAndListen(){
+  if(juhiState===S.ENDED){ return; }
+  if(navigator.mediaDevices && navigator.mediaDevices.getUserMedia){
+    navigator.mediaDevices.getUserMedia({audio:true}).then(()=>startRecognition()).catch(()=>addJuhiMsg(T("Mic access nahi mila. Browser settings mein allow karein. 🎤","Microphone access denied. Please allow mic in browser settings. 🎤"),'juhi'));
+  } else { startRecognition(); }
+}
+function startRecognition(){
+  const SR=window.SpeechRecognition||window.webkitSpeechRecognition;
+  if(!SR){ addJuhiMsg(T("Browser voice support nahi karta. Chrome ya Edge use karein. 🎤","Browser doesn't support voice. Please use Chrome or Edge. 🎤"),'juhi'); return; }
+  recognition=new SR();
+  recognition.lang = userLang==='en' ? 'en-IN' : 'hi-IN';
+  recognition.continuous=false; recognition.interimResults=true;
+  recognition.onstart=()=>{
+    isListening=true;
+    document.getElementById('juhiMicBtn').classList.add('listening');
+    document.getElementById('micIcon').className='fas fa-stop';
+    document.getElementById('micHint').textContent=T('🔴 Sun rahi hoon...','🔴 Listening...');
+    window.speechSynthesis && window.speechSynthesis.cancel();
+  };
+  recognition.onresult=(e)=>{
+    let interim='',final='';
+    for(let i=e.resultIndex;i<e.results.length;i++){
+      if(e.results[i].isFinal) final+=e.results[i][0].transcript;
+      else interim+=e.results[i][0].transcript;
+    }
+    document.getElementById('juhiInput').value=final||interim;
+    if(final){ stopListening(); sendToJuhi(final); }
+  };
+  recognition.onerror=(e)=>{
+    stopListening();
+    if(e.error==='no-speech') addJuhiMsg(T("Awaaz nahi aayi. Phir mic tap karein. 🎤","No speech detected. Tap mic again. 🎤"),'juhi');
+    else if(e.error==='not-allowed'||e.error==='permission-denied') addJuhiMsg(T("Mic permission deny hai. 🔒","Mic permission denied. 🔒"),'juhi');
+    else {
+      if(recognition&&recognition.lang!=='en-US'){ try{recognition.lang='en-US';recognition.start();return;}catch(err){} }
+      addJuhiMsg(T("Voice input mein issue. Text type karein. 🎤","Voice input issue. Please type instead. 🎤"),'juhi');
+    }
+  };
+  recognition.onend=()=>stopListening();
+  try{ recognition.start(); } catch(err){ stopListening(); addJuhiMsg(T("Mic start nahi hua. Text type karein. 🎤","Mic couldn't start. Please type. 🎤"),'juhi'); }
+}
+function stopListening(){
+  isListening=false; try{ if(recognition) recognition.stop(); }catch(e){} recognition=null;
+  const btn=document.getElementById('juhiMicBtn'), icon=document.getElementById('micIcon'), hint=document.getElementById('micHint');
+  if(btn) btn.classList.remove('listening');
+  if(icon) icon.className='fas fa-microphone';
+  if(hint) hint.textContent=T('Tap mic & bolein','Tap mic & speak');
+}
+// Set min date to today for date pickers
+const today = new Date().toISOString().split('T')[0];
+document.querySelectorAll('input[type=date]').forEach(el => el.min = today);
+
+// Smooth scroll for nav links
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const target = document.querySelector(a.getAttribute('href'));
+    if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+  });
+});
+
+// Active nav link on scroll
+const navSections = document.querySelectorAll('section[id], div[id="follow"]');
+window.addEventListener('scroll', () => {
+  let current = '';
+  navSections.forEach(s => { if (window.scrollY >= s.offsetTop - 100) current = s.id; });
+  document.querySelectorAll('.nav-link').forEach(link => {
+    link.classList.remove('active');
+    if (link.getAttribute('href') === '#' + current) link.classList.add('active');
+  });
+});
+</script>
+</body>
+</html>
